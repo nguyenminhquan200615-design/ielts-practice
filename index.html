@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="vi">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +24,7 @@
             <div class="boot-panel">
                 <div class="boot-logo">SHUI · IELTS</div>
                 <p class="boot-status" id="boot-status-text">
-                    正在唤醒 IELTS Atlas...
+                    Đang khởi động IELTS Atlas...
                 </p>
                 <div class="boot-progress">
                     <span
@@ -33,7 +33,7 @@
                     ></span>
                 </div>
                 <span class="boot-progress__text" id="boot-progress-text"
-                    >初始化资源...</span
+                    >Đang tải tài nguyên...</span
                 >
             </div>
         </div>
@@ -48,29 +48,29 @@
             <div class="hero-header">
                 <h1 class="hero-brand-title" aria-label="IELTS Atlas">
                     <span class="hero-brand-mark" aria-hidden="true">
-                        <img src="assets/images/logo.svg" alt="IELTS Atlas Logo" style="width: 80%; height: 80%; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(15, 23, 42, 0.08));">
+                        <img src="assets/images/logo.svg" alt="Biểu trưng IELTS Atlas" style="width: 80%; height: 80%; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(15, 23, 42, 0.08));">
 
                     </span>
                     <span class="hero-brand-text">IELTS Atlas</span>
                     <span class="hero-brand-subtitle"
-                        >项目仅授权ZYZ Reading Walks
-                        提供分发，小红书号：276752989</span
+                        >Dự án chỉ uỷ quyền cho ZYZ Reading Walks
+                        phân phối. Tài khoản Xiaohongshu: 276752989</span
                     >
                     <a
                         href="https://www.xiaohongshu.com/user/profile/5b4d76744eacab058489e72f"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="hero-badge hero-badge--cta hero-badge--redbook"
-                        aria-label="小红书主页"
+                        aria-label="Trang Xiaohongshu"
                     >
-                        小红书
+                        Xiaohongshu
                     </a>
                     <a
                         href="https://github.com/sallowayma-git/IELTS-practice"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-hover-link"
-                        aria-label="GitHub Repository"
+                        aria-label="Kho mã nguồn GitHub"
                     >
                         <svg
                             viewBox="0 0 24 24"
@@ -96,42 +96,42 @@
                     type="button"
                     data-view="overview"
                 >
-                    📊 总览
+                    📊 Tổng quan
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="browse"
                 >
-                    📚 题库浏览
+                    📚 Kho đề
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="practice"
                 >
-                    📝 练习记录
+                    📝 Lịch sử luyện tập
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="more"
                 >
-                    ✨ 更多
+                    ✨ Tiện ích
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="settings"
                 >
-                    ⚙️ 设置
+                    ⚙️ Cài đặt
                 </button>
             </nav>
 
             <!-- 总览页面 -->
             <div id="overview-view" class="view active hero-panel hero-section">
                 <div class="hero-panel__header">
-                    <h2 class="hero-panel__title">📊 学习总览</h2>
+                    <h2 class="hero-panel__title">📊 Tổng quan học tập</h2>
                 </div>
 
                 <div class="category-grid" id="category-overview">
@@ -148,23 +148,23 @@
                         type="button"
                         aria-haspopup="true"
                         aria-expanded="false"
-                        title="列表偏好"
+                        title="Tuỳ chọn danh sách"
                     >
                         📚<span
                             class="browse-title-dot"
                             aria-hidden="true"
                         ></span>
                     </button>
-                    <h2 id="browse-title" class="hero-panel__title">题库浏览</h2>
+                    <h2 id="browse-title" class="hero-panel__title">Kho đề</h2>
                     <button
                         id="reading-memorize-exit-btn"
                         class="reading-memorize-exit-btn"
                         type="button"
                         hidden
-                        aria-label="退出阅读背题模式"
-                        title="退出阅读背题模式"
+                        aria-label="Thoát chế độ ôn đề đọc"
+                        title="Thoát chế độ ôn đề đọc"
                     >
-                        退出背题
+                        Thoát ôn đề
                     </button>
                     <div
                         class="browse-preference-panel"
@@ -177,7 +177,7 @@
                                 id="browse-remember-position"
                             />
                             <span class="browse-preference-text"
-                                >列表位置记录</span
+                                >Nhớ vị trí danh sách</span
                             >
                         </label>
                     </div>
@@ -193,7 +193,7 @@
                             data-index-action="filter-exams"
                             data-action-value="all"
                         >
-                            全部
+                            Tất cả
                         </button>
                         <button
                             class="shui-segmented-btn"
@@ -203,7 +203,7 @@
                             data-index-action="filter-exams"
                             data-action-value="reading"
                         >
-                            阅读
+                            Đọc
                         </button>
                         <button
                             class="shui-segmented-btn"
@@ -214,7 +214,7 @@
                             data-index-action="filter-exams"
                             data-action-value="listening"
                         >
-                            听力
+                            Nghe
                         </button>
                     </div>
                 </div>
@@ -226,15 +226,15 @@
                                 type="text"
                                 class="search-input"
                                 id="exam-search-input"
-                                placeholder="搜索题目..."
-                                aria-label="搜索题目"
+                                placeholder="Tìm đề thi..."
+                                aria-label="Tìm đề thi"
                                 data-index-action="search-exams"
                             />
                             <button
                                 type="button"
                                 class="search-clear-btn"
                                 id="search-clear-btn"
-                                aria-label="清除搜索"
+                                aria-label="Xoá tìm kiếm"
                                 hidden
                                 data-index-action="clear-search"
                             >
@@ -256,7 +256,7 @@
                         <div
                             class="browse-frequency-filter"
                             id="browse-frequency-filter-buttons"
-                            aria-label="频率筛选"
+                            aria-label="Lọc theo tần suất"
                         >
                             <button
                                 class="browse-frequency-chip"
@@ -266,7 +266,7 @@
                                 data-index-action="filter-frequency"
                                 data-action-value="high"
                             >
-                                高频
+                                Thường gặp
                             </button>
                             <button
                                 class="browse-frequency-chip"
@@ -276,7 +276,7 @@
                                 data-index-action="filter-frequency"
                                 data-action-value="medium"
                             >
-                                中频
+                                Tần suất vừa
                             </button>
                             <button
                                 class="browse-frequency-chip"
@@ -286,21 +286,21 @@
                                 data-index-action="filter-frequency"
                                 data-action-value="low"
                             >
-                                低频
+                                Ít gặp
                             </button>
                         </div>
                         <div class="browse-sort-wrapper">
                             <select
                                 id="browse-sort-select"
                                 class="browse-sort-select"
-                                aria-label="题库排序"
+                                aria-label="Sắp xếp kho đề"
                             >
-                                <option value="default">默认排序</option>
+                                <option value="default">Thứ tự mặc định</option>
                                 <option value="frequency-desc">
-                                    频率高→低
+                                    Tần suất giảm dần
                                 </option>
                                 <option value="difficulty-desc">
-                                    难度高→低
+                                    Độ khó giảm dần
                                 </option>
                             </select>
                             <div class="browse-sort-icon">
@@ -327,7 +327,7 @@
                 <div id="exam-list-container"></div>
                 <div class="loading">
                     <div class="spinner"></div>
-                    <p>正在加载题目列表...</p>
+                    <p>Đang tải danh sách đề...</p>
                 </div>
             </div>
 
@@ -335,7 +335,7 @@
             <div id="practice-view" class="view hero-panel hero-section">
                 <div class="hero-panel__header practice-view__header">
                     <div class="practice-view__title-row">
-                        <h2 class="hero-panel__title">📝 练习记录</h2>
+                        <h2 class="hero-panel__title">📝 Lịch sử luyện tập</h2>
                         <button
                             id="practice-summary-toggle"
                             class="practice-summary-toggle"
@@ -343,7 +343,7 @@
                             data-index-action="toggle-practice-summary"
                             aria-controls="practice-summary-region"
                             aria-expanded="true"
-                            aria-label="折叠练习统计卡片"
+                            aria-label="Thu gọn thống kê luyện tập"
                         >
                             <span class="practice-summary-toggle__glyph" aria-hidden="true"></span>
                         </button>
@@ -353,26 +353,26 @@
                 <div id="practice-summary-region" class="practice-summary-region">
                     <div class="practice-stats hero-grid hero-grid--stats">
                         <div class="hero-card hero-card--stat">
-                            <div class="hero-card__label">已练习题目</div>
+                            <div class="hero-card__label">Đề đã luyện</div>
                             <div class="hero-card__value" id="total-practiced">
                                 0
                             </div>
-                            <div class="hero-card__meta">累计巩固练习</div>
+                            <div class="hero-card__meta">Tổng số bài luyện tập</div>
                         </div>
                         <div class="hero-card hero-card--stat">
-                            <div class="hero-card__label">平均正确率</div>
+                            <div class="hero-card__label">Tỷ lệ đúng trung bình</div>
                             <div class="hero-card__value" id="avg-score">0%</div>
-                            <div class="hero-card__meta">近期待练表现</div>
+                            <div class="hero-card__meta">Kết quả luyện tập gần đây</div>
                         </div>
                         <div class="hero-card hero-card--stat">
-                            <div class="hero-card__label">学习时长(分钟)</div>
+                            <div class="hero-card__label">Thời gian học (phút)</div>
                             <div class="hero-card__value" id="study-time">0</div>
-                            <div class="hero-card__meta">聚焦沉浸时长</div>
+                            <div class="hero-card__meta">Thời gian tập trung</div>
                         </div>
                         <div class="hero-card hero-card--stat">
-                            <div class="hero-card__label">连续学习天数</div>
+                            <div class="hero-card__label">Chuỗi ngày học</div>
                             <div class="hero-card__value" id="streak-days">0</div>
-                            <div class="hero-card__meta">坚持天数</div>
+                            <div class="hero-card__meta">Số ngày duy trì</div>
                         </div>
                     </div>
 
@@ -382,7 +382,7 @@
                             class="practice-trend-card"
                             role="button"
                             tabindex="0"
-                            aria-label="打开练习趋势筛选范围"
+                            aria-label="Mở bộ lọc xu hướng luyện tập"
                             aria-pressed="false"
                         >
                             <div class="practice-trend-card__rotor">
@@ -390,27 +390,27 @@
                                     <div class="practice-trend-card__header">
                                         <div class="practice-trend-card__title-line">
                                             <div>
-                                                <h3 class="practice-trend-card__title">练习趋势</h3>
+                                                <h3 class="practice-trend-card__title">Xu hướng luyện tập</h3>
                                             </div>
                                             <div class="practice-trend-card__metrics">
                                                 <div>
                                                     <span class="practice-trend-card__metric-value" id="practice-trend-count">0</span>
-                                                    <span class="practice-trend-card__metric-label">记录</span>
+                                                    <span class="practice-trend-card__metric-label">Lượt luyện</span>
                                                 </div>
                                                 <div>
                                                     <span class="practice-trend-card__metric-value" id="practice-trend-average">0%</span>
-                                                    <span class="practice-trend-card__metric-label">均值</span>
+                                                    <span class="practice-trend-card__metric-label">Trung bình</span>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="practice-trend-card__range" id="practice-trend-range-label">
-                                            最近十次
+                                            10 lượt gần nhất
                                         </div>
                                     </div>
                                     <div class="practice-trend-chart-shell">
                                         <canvas id="practice-trend-canvas" aria-hidden="true"></canvas>
                                         <div id="practice-trend-empty" class="practice-trend-empty">
-                                            暂无趋势数据
+                                            Chưa có dữ liệu xu hướng
                                         </div>
                                     </div>
                                 </div>
@@ -418,17 +418,17 @@
                                     <div class="practice-trend-card__header">
                                         <div>
                                             <p class="practice-trend-card__eyebrow">Range</p>
-                                            <h3 class="practice-trend-card__title">筛选范围</h3>
+                                            <h3 class="practice-trend-card__title">Phạm vi lọc</h3>
                                         </div>
                                     </div>
-                                    <div class="practice-trend-options" aria-label="练习趋势筛选范围">
+                                    <div class="practice-trend-options" aria-label="Phạm vi xu hướng luyện tập">
                                         <button
                                             class="practice-trend-option active"
                                             type="button"
                                             data-practice-trend-range="recent10"
                                             aria-pressed="true"
                                         >
-                                            最近十次
+                                            10 lượt gần nhất
                                         </button>
                                         <button
                                             class="practice-trend-option"
@@ -436,7 +436,7 @@
                                             data-practice-trend-range="last7d"
                                             aria-pressed="false"
                                         >
-                                            最近七天
+                                            7 ngày gần nhất
                                         </button>
                                         <button
                                             class="practice-trend-option"
@@ -444,7 +444,7 @@
                                             data-practice-trend-range="last30d"
                                             aria-pressed="false"
                                         >
-                                            最近一月
+                                            30 ngày gần nhất
                                         </button>
                                         <button
                                             class="practice-trend-option"
@@ -452,7 +452,7 @@
                                             data-practice-trend-range="recent20"
                                             aria-pressed="false"
                                         >
-                                            最近20次
+                                            20 lượt gần nhất
                                         </button>
                                     </div>
                                 </div>
@@ -466,20 +466,20 @@
                                 <div class="practice-trend-card__face practice-custom-card__front">
                                     <div class="practice-trend-card__header">
                                         <div>
-                                            <h3 class="practice-trend-card__title" id="practice-custom-card-title">练习热力图</h3>
+                                            <h3 class="practice-trend-card__title" id="practice-custom-card-title">Biểu đồ hoạt động</h3>
                                         </div>
                                         <div class="practice-custom-card__header-actions">
                                             <div
                                                 class="practice-heatmap-month-controls"
                                                 id="practice-heatmap-month-controls"
-                                                aria-label="切换热力图月份"
+                                                aria-label="Đổi tháng trên biểu đồ"
                                             >
                                                 <button
                                                     class="practice-custom-card__icon-btn"
                                                     type="button"
                                                     data-practice-heatmap-month="prev"
-                                                    aria-label="查看上个月"
-                                                    title="上个月"
+                                                    aria-label="Xem tháng trước"
+                                                    title="Tháng trước"
                                                 >
                                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                                         <path d="m15 18-6-6 6-6"></path>
@@ -489,13 +489,13 @@
                                                     class="practice-heatmap-month-label"
                                                     id="practice-heatmap-month-label"
                                                     aria-live="polite"
-                                                >本月</span>
+                                                >Tháng này</span>
                                                 <button
                                                     class="practice-custom-card__icon-btn"
                                                     type="button"
                                                     data-practice-heatmap-month="next"
-                                                    aria-label="查看下个月"
-                                                    title="下个月"
+                                                    aria-label="Xem tháng sau"
+                                                    title="Tháng sau"
                                                 >
                                                     <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                                                         <path d="m9 18 6-6-6-6"></path>
@@ -505,8 +505,8 @@
                                             <button
                                                 class="practice-custom-card__flip-btn practice-custom-card__icon-btn"
                                                 type="button"
-                                                aria-label="配置自定义组件"
-                                                title="配置自定义组件"
+                                                aria-label="Tuỳ chỉnh bảng thống kê"
+                                                title="Tuỳ chỉnh bảng thống kê"
                                             >
                                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                     <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"></path>
@@ -524,25 +524,25 @@
                                         </div>
                                     </div>
                                     <div class="practice-custom-widget-content" data-widget-type="heatmap">
-                                        <div class="practice-heatmap" id="practice-heatmap" aria-label="练习活动热力图"></div>
+                                        <div class="practice-heatmap" id="practice-heatmap" aria-label="Biểu đồ hoạt động luyện tập"></div>
                                         <div class="practice-heatmap__footer">
-                                            <span id="practice-heatmap-summary">本月暂无练习记录</span>
-                                            <div class="practice-heatmap__legend" aria-label="做题量颜色图例">
-                                                <span>少</span>
+                                            <span id="practice-heatmap-summary">Chưa có lượt luyện tập trong tháng này</span>
+                                            <div class="practice-heatmap__legend" aria-label="Chú giải màu số bài đã làm">
+                                                <span>Ít</span>
                                                 <i class="practice-heatmap__legend-cell practice-heatmap__legend-cell--0"></i>
                                                 <i class="practice-heatmap__legend-cell practice-heatmap__legend-cell--1"></i>
                                                 <i class="practice-heatmap__legend-cell practice-heatmap__legend-cell--2"></i>
                                                 <i class="practice-heatmap__legend-cell practice-heatmap__legend-cell--3"></i>
                                                 <i class="practice-heatmap__legend-cell practice-heatmap__legend-cell--4"></i>
-                                                <span>多</span>
+                                                <span>Nhiều</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="practice-custom-widget-content" data-widget-type="priority" hidden>
-                                    <div class="priority-progress-stack" aria-label="中高频练习进度">
+                                    <div class="priority-progress-stack" aria-label="Tiến độ đề thường gặp và tần suất vừa">
                                         <div class="priority-progress priority-progress--high">
                                             <div class="priority-progress__head">
-                                                <span>高频</span>
+                                                <span>Thường gặp</span>
                                                 <strong id="practice-priority-high-count">0/0</strong>
                                             </div>
                                             <div class="priority-progress__track" aria-hidden="true">
@@ -554,7 +554,7 @@
                                         </div>
                                         <div class="priority-progress priority-progress--medium">
                                             <div class="priority-progress__head">
-                                                <span>中频</span>
+                                                <span>Tần suất vừa</span>
                                                 <strong id="practice-priority-medium-count">0/0</strong>
                                             </div>
                                             <div class="priority-progress__track" aria-hidden="true">
@@ -565,14 +565,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="priority-accuracy" aria-label="中高频正确率">
+                                    <div class="priority-accuracy" aria-label="Tỷ lệ đúng theo tần suất">
                                         <div class="priority-accuracy__orb priority-accuracy__orb--high">
                                             <span id="practice-priority-high-accuracy">0%</span>
-                                            <small>高频正确率</small>
+                                            <small>Tỷ lệ đúng của đề thường gặp</small>
                                         </div>
                                         <div class="priority-accuracy__orb priority-accuracy__orb--medium">
                                             <span id="practice-priority-medium-accuracy">0%</span>
-                                            <small>中频正确率</small>
+                                            <small>Tỷ lệ đúng của đề tần suất vừa</small>
                                         </div>
                                     </div>
                                     </div>
@@ -580,11 +580,11 @@
                                         <div class="practice-radar-chart-shell">
                                             <canvas id="practice-radar-canvas" aria-hidden="true"></canvas>
                                             <div id="practice-radar-empty" class="practice-trend-empty">
-                                                暂无阅读错题数据
+                                                Chưa có dữ liệu câu đọc trả lời sai
                                             </div>
                                         </div>
                                         <p class="practice-radar-summary" id="practice-radar-summary">
-                                            最近10次阅读错题题型分布
+                                            Phân bố dạng câu sai trong 10 bài đọc gần nhất
                                         </p>
                                     </div>
                                 </div>
@@ -592,14 +592,14 @@
                                     <div class="practice-trend-card__header">
                                         <div>
                                             <p class="practice-trend-card__eyebrow">Widgets</p>
-                                            <h3 class="practice-trend-card__title">自定义组件</h3>
+                                            <h3 class="practice-trend-card__title">Tuỳ chỉnh bảng thống kê</h3>
                                         </div>
                                         <div class="practice-custom-card__header-actions">
                                             <button
                                                 class="practice-custom-card__flip-btn practice-custom-card__icon-btn"
                                                 type="button"
-                                                aria-label="关闭自定义练习组件选择"
-                                                title="关闭自定义练习组件选择"
+                                                aria-label="Đóng tuỳ chọn bảng thống kê"
+                                                title="Đóng tuỳ chọn bảng thống kê"
                                             >
                                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                                     <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -608,7 +608,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    <div class="practice-custom-options" aria-label="自定义练习组件">
+                                    <div class="practice-custom-options" aria-label="Bảng thống kê tuỳ chỉnh">
                                         <button
                                             class="practice-custom-option active"
                                             type="button"
@@ -628,7 +628,7 @@
                                                 </svg>
                                             </span>
                                             <span class="practice-custom-option__body">
-                                                <strong>练习热力图</strong>
+                                                <strong>Biểu đồ hoạt động</strong>
                                             </span>
                                             <span class="practice-custom-option__check" aria-hidden="true"></span>
                                         </button>
@@ -647,7 +647,7 @@
                                                 </svg>
                                             </span>
                                             <span class="practice-custom-option__body">
-                                                <strong>中高频余量</strong>
+                                                <strong>Đề thường gặp còn lại</strong>
                                             </span>
                                             <span class="practice-custom-option__check" aria-hidden="true"></span>
                                         </button>
@@ -665,7 +665,7 @@
                                                 </svg>
                                             </span>
                                             <span class="practice-custom-option__body">
-                                                <strong>阅读错题雷达</strong>
+                                                <strong>Biểu đồ dạng câu đọc sai</strong>
                                             </span>
                                             <span class="practice-custom-option__check" aria-hidden="true"></span>
                                         </button>
@@ -679,7 +679,7 @@
                 <div class="practice-history hero-panel hero-section">
                     <div class="hero-panel__header">
                         <h3 class="hero-panel__title">
-                            📈 练习历史
+                            📈 Lịch sử luyện tập
                         </h3>
                         <div
                             id="record-type-filter-buttons"
@@ -693,7 +693,7 @@
                                 data-index-action="filter-records"
                                 data-action-value="all"
                             >
-                                全部
+                                Tất cả
                             </button>
                             <button
                                 class="shui-segmented-btn"
@@ -703,7 +703,7 @@
                                 data-index-action="filter-records"
                                 data-action-value="reading"
                             >
-                                阅读
+                                Đọc
                             </button>
                             <button
                                 class="shui-segmented-btn"
@@ -713,7 +713,7 @@
                                 data-index-action="filter-records"
                                 data-action-value="listening"
                             >
-                                听力
+                                Nghe
                             </button>
                         </div>
                         <div class="hero-panel__actions">
@@ -721,7 +721,7 @@
                                 class="btn btn-secondary"
                                 data-index-action="export-practice-markdown"
                             >
-                                📄 导出Markdown
+                                📄 Xuất Markdown
                             </button>
                             <button
                                 class="btn btn-info"
@@ -747,13 +747,13 @@
                                         d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
                                     ></path>
                                 </svg>
-                                批量删除
+                                Xoá nhiều mục
                             </button>
                             <button
                                 class="btn btn-warning"
                                 data-index-action="clear-practice-data"
                             >
-                                🗑️ 清除记录
+                                🗑️ Xoá lịch sử
                             </button>
                         </div>
                     </div>
@@ -762,9 +762,9 @@
                             <div class="history-empty-placeholder__icon">
                                 📋
                             </div>
-                            <p>暂无练习记录</p>
+                            <p>Chưa có lịch sử luyện tập</p>
                             <p class="history-empty-placeholder__note">
-                                开始练习后，记录将自动保存在这里
+                                Lịch sử sẽ tự động được lưu tại đây sau khi bạn luyện tập
                             </p>
                         </div>
                     </div>
@@ -774,34 +774,34 @@
             <!-- 设置页面 -->
             <div id="settings-view" class="view hero-panel hero-section">
                 <div class="hero-panel__header">
-                    <h2 class="hero-panel__title">⚙️ 系统设置</h2>
+                    <h2 class="hero-panel__title">⚙️ Cài đặt hệ thống</h2>
                 </div>
                 <div class="hero-settings-group">
                     <div
                         class="hero-panel hero-section system-management-panel"
                     >
-                        <h3>🔧 系统管理</h3>
-                        <p class="hero-panel__muted">系统工具和设置选项</p>
+                        <h3>🔧 Quản lý hệ thống</h3>
+                        <p class="hero-panel__muted">Công cụ hệ thống và các tuỳ chọn</p>
                         <div class="hero-settings-actions">
                             <button
                                 type="button"
                                 class="btn btn-warning"
                                 id="clear-cache-btn"
                             >
-                                🗑️ 清理数据
+                                🗑️ Dọn dữ liệu
                             </button>
                             <button
                                 class="btn btn-warning"
                                 id="theme-switcher-btn-entry"
                             >
-                                🎨 主题切换
+                                🎨 Đổi giao diện
                             </button>
                             <button
                                 class="btn btn-warning"
                                 id="practice-settings-entry-btn"
                                 type="button"
                             >
-                                ⚙️ 练习设置
+                                ⚙️ Cài đặt luyện tập
                             </button>
                             <button
                                 class="btn btn-warning"
@@ -845,21 +845,21 @@
                                         y2="16"
                                     ></line>
                                 </svg>
-                                题库管理
+                                Quản lý kho đề
                             </button>
                             <button
                                 class="btn btn-warning"
                                 id="show-onboarding-btn"
                             >
-                                🎯 显示引导
+                                🎯 Xem hướng dẫn
                             </button>
                         </div>
                     </div>
 
                     <div class="hero-panel hero-section data-management-panel">
-                        <h3>💾 数据管理</h3>
+                        <h3>💾 Quản lý dữ liệu</h3>
                         <p class="hero-panel__muted">
-                            本地磁盘备份（推荐）、应用内快照、导入与导出。清理浏览器站点数据不会删除已写入磁盘的备份文件。
+                            Sao lưu vào máy (khuyên dùng), bản lưu trong ứng dụng, nhập và xuất dữ liệu. Xoá dữ liệu trang web trong trình duyệt không xoá các tệp sao lưu đã lưu vào máy.
                         </p>
                         <div class="hero-settings-actions">
                             <button
@@ -867,50 +867,50 @@
                                 id="external-backup-entry-btn"
                                 type="button"
                             >
-                                📁 本地磁盘备份
+                                📁 Sao lưu vào máy
                             </button>
                             <button
                                 class="btn data-mgmt-btn"
                                 id="create-backup-btn"
                             >
-                                💾 创建应用内备份
+                                💾 Tạo bản sao lưu trong ứng dụng
                             </button>
                             <button
                                 class="btn data-mgmt-btn"
                                 id="backup-list-btn"
                             >
-                                📋 应用内备份列表
+                                📋 Danh sách bản sao lưu trong ứng dụng
                             </button>
                             <button
                                 class="btn data-mgmt-btn"
                                 id="export-data-btn"
                             >
-                                📤 导出到下载
+                                📤 Tải bản xuất dữ liệu
                             </button>
                             <button
                                 class="btn data-mgmt-btn"
                                 id="import-data-btn"
                             >
-                                📥 导入数据
+                                📥 Nhập dữ liệu
                             </button>
                         </div>
                     </div>
 
                     <div class="hero-panel hero-section">
-                        <h3>📊 系统信息</h3>
+                        <h3>📊 Thông tin hệ thống</h3>
                         <div class="hero-surface settings-system-info">
                             <div class="settings-system-info__status">
-                                题库状态: 已加载完整索引
+                                Trạng thái kho đề: Đã tải toàn bộ chỉ mục
                             </div>
                             <div>
-                                题目总数: <span id="total-exams">234</span>
+                                Tổng số đề: <span id="total-exams">234</span>
                             </div>
                             <div>
-                                HTML题目: <span id="html-exams">232</span>
+                                Đề HTML: <span id="html-exams">232</span>
                             </div>
-                            <div>PDF题目: <span id="pdf-exams">207</span></div>
+                            <div>Đề PDF: <span id="pdf-exams">207</span></div>
                             <div>
-                                最后更新:
+                                Cập nhật lần cuối:
                                 <span id="last-update"
                                     >2026/09/04 21:12:40</span
                                 >
@@ -925,7 +925,7 @@
                                 rel="noopener noreferrer"
                                 class="inline-hover-link settings-footer__feedback"
                             >
-                                问题反馈
+                                Gửi phản hồi
                             </a>
                             <a
                                 href="https://github.com/sallowayma-git"
@@ -933,7 +933,7 @@
                                 rel="noopener noreferrer"
                                 class="settings-footer__author"
                             >
-                                Salloway呈现
+                                Phát triển bởi Salloway
                             </a>
                         </div>
                     </div>
@@ -943,10 +943,10 @@
             <!-- 更多页面 -->
             <div id="more-view" class="view hero-panel hero-section">
                 <div class="hero-panel__header">
-                    <h2 class="hero-panel__title">✨ 更多工具</h2>
+                    <h2 class="hero-panel__title">✨ Tiện ích học tập</h2>
                 </div>
                 <p class="more-view-subtitle">
-                    探索额外的学习辅助功能，助你高效备考。
+                    Khám phá các công cụ hỗ trợ để ôn thi hiệu quả hơn.
                 </p>
                 <div class="more-tools-grid">
                     <button
@@ -956,12 +956,12 @@
                     >
                         <div class="tool-card-icon">🕒</div>
                         <div class="tool-card-content">
-                            <h3>全屏时钟</h3>
+                            <h3>Đồng hồ toàn màn hình</h3>
                             <p>
-                                沉浸式模拟指针时钟，实时同步系统时间，陪伴你的专注时刻。
+                                Đồng hồ kim đồng bộ với giờ hệ thống, giúp bạn tập trung khi học.
                             </p>
                         </div>
-                        <div class="tool-card-arrow">进入</div>
+                        <div class="tool-card-arrow">Mở</div>
                     </button>
                     <button
                         class="tool-card"
@@ -970,10 +970,10 @@
                     >
                         <div class="tool-card-icon">🧠</div>
                         <div class="tool-card-content">
-                            <h3>单词背诵</h3>
-                            <p>SM-2记忆算法，随时继续你的词汇任务。</p>
+                            <h3>Ôn từ vựng</h3>
+                            <p>Ôn từ vựng với thuật toán lặp lại ngắt quãng SM-2, tiếp tục học bất cứ lúc nào.</p>
                         </div>
-                        <div class="tool-card-arrow">进入</div>
+                        <div class="tool-card-arrow">Mở</div>
                     </button>
                     <button
                         class="tool-card"
@@ -982,10 +982,10 @@
                     >
                         <div class="tool-card-icon">🧩</div>
                         <div class="tool-card-content">
-                            <h3>阅读背题</h3>
-                            <p>复用统一阅读页，查看答案、解析与定位高亮，并可切换测试。</p>
+                            <h3>Ôn đề đọc</h3>
+                            <p>Xem đáp án, lời giải và vị trí dẫn chứng trên trang đọc; có thể chuyển sang làm bài kiểm tra.</p>
                         </div>
-                        <div class="tool-card-arrow">进入</div>
+                        <div class="tool-card-arrow">Mở</div>
                     </button>
                     <button
                         class="tool-card"
@@ -994,10 +994,10 @@
                     >
                         <div class="tool-card-icon">🏆</div>
                         <div class="tool-card-content">
-                            <h3>成就</h3>
-                            <p>查看你解锁的徽章和荣誉。</p>
+                            <h3>Thành tích</h3>
+                            <p>Xem các huy hiệu và thành tích bạn đã đạt được.</p>
                         </div>
-                        <div class="tool-card-arrow">查看</div>
+                        <div class="tool-card-arrow">Xem</div>
                     </button>
                 </div>
             </div>
@@ -1011,7 +1011,7 @@
             class="clock-overlay is-hidden"
             role="dialog"
             aria-modal="true"
-            aria-label="全屏时钟"
+            aria-label="Đồng hồ toàn màn hình"
         >
             <div
                 class="clock-overlay-inner controls-hidden"
@@ -1021,7 +1021,7 @@
                     class="clock-action-btn clock-fullscreen-btn"
                     type="button"
                     data-action="toggle-clock-fullscreen"
-                    aria-label="切换全屏模式"
+                    aria-label="Bật/tắt toàn màn hình"
                     aria-pressed="false"
                 >
                     <svg
@@ -1055,7 +1055,7 @@
                     class="clock-action-btn clock-close-btn"
                     type="button"
                     data-action="close-clock"
-                    aria-label="关闭时钟"
+                    aria-label="Đóng đồng hồ"
                 >
                     <svg
                         class="fullscreen-icon icon-close"
@@ -1071,7 +1071,7 @@
                     <section
                         class="clock-view is-active"
                         data-clock-view="analog"
-                        aria-label="模拟指针时钟"
+                        aria-label="Đồng hồ kim"
                     >
                         <canvas
                             id="analog-clock-canvas"
@@ -1081,7 +1081,7 @@
                     <section
                         class="clock-view"
                         data-clock-view="flip"
-                        aria-label="翻页时钟"
+                        aria-label="Đồng hồ lật"
                     >
                         <div
                             class="flip-clock"
@@ -1092,7 +1092,7 @@
                     <section
                         class="clock-view"
                         data-clock-view="digital"
-                        aria-label="数字时钟"
+                        aria-label="Đồng hồ số"
                     >
                         <div
                             class="digital-clock"
@@ -1103,7 +1103,7 @@
                     <section
                         class="clock-view"
                         data-clock-view="ambient"
-                        aria-label="低对比度数字时钟"
+                        aria-label="Đồng hồ số tương phản thấp"
                     >
                         <div
                             class="ambient-clock"
@@ -1121,25 +1121,25 @@
                         class="clock-dot is-active"
                         type="button"
                         data-target-view="analog"
-                        aria-label="切换到模拟指针时钟"
+                        aria-label="Chuyển sang đồng hồ kim"
                     ></button>
                     <button
                         class="clock-dot"
                         type="button"
                         data-target-view="flip"
-                        aria-label="切换到翻页时钟"
+                        aria-label="Chuyển sang đồng hồ lật"
                     ></button>
                     <button
                         class="clock-dot"
                         type="button"
                         data-target-view="digital"
-                        aria-label="切换到数字时钟"
+                        aria-label="Chuyển sang đồng hồ số"
                     ></button>
                     <button
                         class="clock-dot"
                         type="button"
                         data-target-view="ambient"
-                        aria-label="切换到低对比度数字时钟"
+                        aria-label="Chuyển sang đồng hồ số tương phản thấp"
                     ></button>
                 </div>
             </div>
@@ -1149,11 +1149,11 @@
         <div id="theme-switcher-modal" class="theme-modal">
             <div class="theme-modal-content">
                 <div class="theme-modal-header">
-                    <h3>🎨 主题切换</h3>
+                    <h3>🎨 Đổi giao diện</h3>
                     <button
                         class="theme-modal-close"
                         data-index-action="hide-theme-switcher"
-                        aria-label="关闭"
+                        aria-label="Đóng"
                     >
                         ×
                     </button>
@@ -1164,7 +1164,7 @@
                             class="theme-scroll-btn theme-scroll-btn-prev"
                             type="button"
                             data-theme-scroll="prev"
-                            aria-label="向左滚动主题列表"
+                            aria-label="Cuộn danh sách giao diện sang trái"
                             aria-controls="theme-options-scroller"
                         >
                             <svg
@@ -1193,7 +1193,7 @@
                                 <div class="theme-card-glass-layer">
                                     <div class="theme-card-header">
                                         <h4 class="theme-card-title">
-                                            晨雾群山
+                                            Núi trong sương sớm
                                         </h4>
                                         <div class="theme-card-subtitle">
                                             <span>⛰️ Misty Mountain</span
@@ -1201,13 +1201,13 @@
                                         </div>
                                     </div>
                                     <div class="theme-card-footer">
-                                        <span class="theme-card-tag">动态</span>
+                                        <span class="theme-card-tag">Ảnh động</span>
                                         <button
                                             class="theme-card-btn"
                                             data-index-action="switch-bg-theme"
                                             data-action-value="misty-mountain"
                                         >
-                                            应用
+                                            Áp dụng
                                         </button>
                                     </div>
                                 </div>
@@ -1218,7 +1218,7 @@
                                 <div class="theme-card-glass-layer">
                                     <div class="theme-card-header">
                                         <h4 class="theme-card-title">
-                                            深海孤航
+                                            Hải trình biển sâu
                                         </h4>
                                         <div class="theme-card-subtitle">
                                             <span>⛵ Teal Ocean</span
@@ -1226,13 +1226,13 @@
                                         </div>
                                     </div>
                                     <div class="theme-card-footer">
-                                        <span class="theme-card-tag">动态</span>
+                                        <span class="theme-card-tag">Ảnh động</span>
                                         <button
                                             class="theme-card-btn"
                                             data-index-action="switch-bg-theme"
                                             data-action-value="teal-ocean"
                                         >
-                                            应用
+                                            Áp dụng
                                         </button>
                                     </div>
                                 </div>
@@ -1245,7 +1245,7 @@
                                 <div class="theme-card-glass-layer">
                                     <div class="theme-card-header">
                                         <h4 class="theme-card-title">
-                                            落日雾花
+                                            Hoa trong hoàng hôn
                                         </h4>
                                         <div class="theme-card-subtitle">
                                             <span>🌸 Floral Bloom</span
@@ -1253,13 +1253,13 @@
                                         </div>
                                     </div>
                                     <div class="theme-card-footer">
-                                        <span class="theme-card-tag">静态</span>
+                                        <span class="theme-card-tag">Ảnh tĩnh</span>
                                         <button
                                             class="theme-card-btn"
                                             data-index-action="switch-bg-theme"
                                             data-action-value="floral-bloom"
                                         >
-                                            应用
+                                            Áp dụng
                                         </button>
                                     </div>
                                 </div>
@@ -1276,11 +1276,11 @@
                                         </div>
                                     </div>
                                     <div class="theme-card-footer">
-                                        <span class="theme-card-tag">动态</span>
+                                        <span class="theme-card-tag">Ảnh động</span>
                                         <button
                                             class="theme-card-btn"
                                             data-index-action="switch-bg-theme"
-                                            data-action-value="newjeans" > 应用 </button> </div> </div> </div>
+                                            data-action-value="newjeans" > Áp dụng </button> </div> </div> </div>
                             <!-- 墨染字花 -->
                             <div class="theme-card">
                                 <div class="theme-card-bg theme-bg-ascii"></div>
@@ -1315,23 +1315,23 @@
                                 </div>
                                 <div class="theme-card-glass-layer">
                                     <div class="theme-card-header">
-                                        <h4 class="theme-card-title">墨染字花</h4>
+                                        <h4 class="theme-card-title">Hoa mực</h4>
                                         <div class="theme-card-subtitle">
                                             <span>🌷 Ink Bloom</span>
                                         </div>
                                     </div>
                                     <div class="theme-card-footer">
-                                        <span class="theme-card-tag">静态</span>
+                                        <span class="theme-card-tag">Ảnh tĩnh</span>
                                         <button
                                             class="theme-card-btn"
                                             data-index-action="switch-bg-theme"
-                                            data-action-value="ascii-flower" > 应用 </button> </div> </div> </div>
+                                            data-action-value="ascii-flower" > Áp dụng </button> </div> </div> </div>
                         </div>
                         <button
                             class="theme-scroll-btn theme-scroll-btn-next"
                             type="button"
                             data-theme-scroll="next"
-                            aria-label="向右滚动主题列表"
+                            aria-label="Cuộn danh sách giao diện sang phải"
                             aria-controls="theme-options-scroller"
                         >
                             <svg
@@ -1372,11 +1372,11 @@
         <div id="achievements-modal" class="theme-modal">
             <div class="theme-modal-content achievements-modal-content">
                 <div class="theme-modal-header">
-                    <h3>🏆 我的成就</h3>
+                    <h3>🏆 Thành tích của tôi</h3>
                     <button
                         class="theme-modal-close"
                         data-index-action="hide-achievements"
-                        aria-label="关闭"
+                        aria-label="Đóng"
                     >
                         ×
                     </button>
@@ -1392,38 +1392,38 @@
         <!-- 首次开源许可弹窗 -->
         <div id="license-modal">
             <div class="lm-card">
-                <h2 class="lm-title">开源项目使用须知</h2>
+                <h2 class="lm-title">Lưu ý sử dụng dự án mã nguồn mở</h2>
                 <div class="lm-body">
                     <p>
-                        感谢使用！本项目是免费软件，采用
-                        <strong>GPL-3.0 License</strong> 发布。
+                        Cảm ơn bạn đã sử dụng! Đây là phần mềm miễn phí, được phát hành theo
+                        <strong>GPL-3.0 License</strong>.
                     </p>
                     <p class="lm-warning">
-                        我们明确反对任何形式的倒卖、改名后二次分发、牟利、使用该项目商业引流等行为。
+                        Nhóm phát triển phản đối việc bán lại, đổi tên để phân phối lại, trục lợi hoặc dùng dự án để thu hút khách hàng thương mại.
                     </p>
                     <p>
-                        本项目的初衷是自由使用、学习与改进，而不是作为倒卖工具获取不正当收益。
+                        Dự án được tạo ra để mọi người tự do sử dụng, học hỏi và cải tiến; không nhằm phục vụ việc bán lại để thu lợi bất chính.
                     </p>
                     <p>
-                        腾讯文档：
+                        Tài liệu Tencent:
                         <a
                             href="https://docs.qq.com/doc/DSXZhWUtqeVN0d1ZT"
                             target="_blank"
                             rel="noopener noreferrer"
                             class="lm-warning"
-                            >问题反馈</a
+                            >Gửi phản hồi</a
                         >
                     </p>
                     <div class="lm-info-box">
                         <p>
-                            任何分发、修改或再发布行为，都必须遵守 GPL-3.0
-                            协议，包括<strong>公开源码、保留开源许可，并尊重用户的自由</strong>。
+                            Mọi hoạt động phân phối, sửa đổi hoặc tái phát hành phải tuân thủ GPL-3.0,
+                            bao gồm việc <strong>công khai mã nguồn, giữ nguyên giấy phép mã nguồn mở và tôn trọng quyền tự do của người dùng</strong>.
                         </p>
                     </div>
                 </div>
                 <div class="lm-footer">
                     <button class="lm-btn" data-index-action="accept-license">
-                        我已了解
+                        Tôi đã hiểu
                     </button>
                 </div>
             </div>

@@ -9,6 +9,7 @@ const checkOnly = process.argv.includes('--check');
 
 const bundles = {
     'js/bundles/runtime-entry.bundle.js': [
+        'js/i18n/vi.js',
         'js/presentation/threeBackground.js',
         'js/runtime/bootScreen.js',
         'js/runtime/lazyLoader.js',
@@ -84,6 +85,7 @@ const bundles = {
         'js/app/suitePracticeMixin.js'
     ],
     'js/bundles/reading-page.bundle.js': [
+        'js/i18n/vi.js',
         'js/data/practiceRecordSource.js',
         'js/data/v2/dataCatalog.js',
         'js/data/v2/dataKernel.js',
@@ -103,6 +105,7 @@ const bundles = {
         'js/runtime/unifiedReadingPage.js'
     ],
     'js/bundles/practice-page-enhancer.bundle.js': [
+        'js/i18n/vi.js',
         'js/data/practiceRecordSource.js',
         'js/data/v2/dataCatalog.js',
         'js/data/v2/dataKernel.js',
@@ -127,6 +130,7 @@ const bundles = {
          'js/listeningRecordBridge.js'
      ],
     'js/bundles/listening-wrapper.bundle.js': [
+        'js/i18n/vi.js',
         'js/data/practiceRecordSource.js',
         'js/data/v2/dataCatalog.js',
         'js/data/v2/dataKernel.js',

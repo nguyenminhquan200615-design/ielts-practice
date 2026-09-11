@@ -170,7 +170,7 @@ async function run() {
     'footer_reset_not_limited_to_review_and_retake',
     failed
   );
-  ok(/id="options-clear-answers"[^>]*>Clear answers<\/button>/.test(unifiedHtml), 'options_clear_answers_action_missing', failed);
+  ok(/id="options-clear-answers"[^>]*>Xoá câu trả lời<\/button>/.test(unifiedHtml), 'options_clear_answers_action_missing', failed);
   ok(/function canClearDraftAnswers\s*\([\s\S]*state\.submissionStatus === 'draft'[\s\S]*!state\.readOnly[\s\S]*!state\.submitted[\s\S]*!state\.reviewMode[\s\S]*!state\.memorizeMode/.test(unifiedPage), 'options_clear_answers_not_draft_gated', failed);
   ok(/getElementById\('options-clear-answers'\)\?\.addEventListener\('click', handleReset\)/.test(unifiedPage), 'options_clear_answers_not_bound_to_reset', failed);
   ok(/setSettingsBackgroundInert\(true\)/.test(unifiedPage), 'options_background_not_inert', failed);

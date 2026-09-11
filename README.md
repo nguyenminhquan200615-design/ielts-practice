@@ -1,4 +1,5 @@
 # IELTS Atlas / IELTS Practice
+[Hướng dẫn tiếng Việt](README.vi.md)
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/sallowayma-git/IELTS-practice)
 
 ## 重要使用声明

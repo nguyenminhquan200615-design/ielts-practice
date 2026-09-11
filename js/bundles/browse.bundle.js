@@ -10676,9 +10676,9 @@
         formatDate(dateString, format = 'YYYY-MM-DD HH:mm') {
             const date = new Date(dateString);
             if (format === 'HH:mm') {
-                return date.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+                return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
             }
-            return date.toLocaleString('zh-CN');
+            return date.toLocaleString('vi-VN');
         },
 
         /**
@@ -22231,6 +22231,12 @@ async function performSearch(
     const searchBase = getBrowseFilteredExamBase(examIndexSnapshot);
     console.log('[Search] 当前筛选后索引数量:', searchBase.length);
     const searchResults = searchBase.filter(exam => {
+        const translate = window.IELTSVietnamese?.translate;
+        if (translate) {
+            const fold = value => String(value || '').normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '').replace(/đ/g, 'd').replace(/Đ/g, 'D').toLowerCase();
+            if (fold(translate(exam.title || '')).includes(fold(normalizedQuery))) return true;
+        }
         if (exam.searchText) {
             return exam.searchText.includes(normalizedQuery);
         }

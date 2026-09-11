@@ -3176,7 +3176,7 @@
             }
             const hint = document.createElement('p');
             hint.className = 'nb-hint';
-            hint.textContent = 'NB: 该题型允许同一选项重复使用。';
+            hint.textContent = 'Lưu ý: Có thể sử dụng một lựa chọn nhiều lần cho dạng câu hỏi này.';
             const anchor = groupEl.querySelector('h4, h3, p');
             if (anchor && anchor.parentElement === groupEl) {
                 anchor.insertAdjacentElement('afterend', hint);

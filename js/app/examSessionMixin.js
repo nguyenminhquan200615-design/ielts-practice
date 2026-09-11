@@ -3146,9 +3146,9 @@
         formatDate(dateString, format = 'YYYY-MM-DD HH:mm') {
             const date = new Date(dateString);
             if (format === 'HH:mm') {
-                return date.toLocaleTimeString('zh-CN', { hour: '2-digit', minute: '2-digit' });
+                return date.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
             }
-            return date.toLocaleString('zh-CN');
+            return date.toLocaleString('vi-VN');
         },
 
         /**
