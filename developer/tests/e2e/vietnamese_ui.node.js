@@ -14,6 +14,17 @@ try {
     const skip = page.locator('[data-action="skip"]:visible');
     if (await skip.count()) await skip.first().click();
     assert.equal(await page.locator('html').getAttribute('lang'), 'vi');
+    await page.locator('.main-nav [data-view="overview"]').click();
+    await page.getByText('Luyện trọn bộ đề', { exact: true }).click();
+    await page.locator('#suite-mode-selector-modal').waitFor();
+    assert.doesNotMatch(await page.locator('#suite-mode-selector-modal').innerText(), /[\u3400-\u9fff]/, 'Suite selector is localized');
+    await page.locator('#suite-mode-selector-modal [data-suite-flow-cancel]').click();
+    await page.getByText('Luyện trọn bộ đề', { exact: true }).click();
+    await page.locator('#suite-frequency-scope').selectOption('custom');
+    await page.locator('#suite-mode-selector-modal [data-suite-flow-mode="classic"]').click();
+    await page.waitForTimeout(500);
+    assert.doesNotMatch(await page.locator('#browse-view').innerText(), /[\u3400-\u9fff]/, 'Custom suite selection is localized');
+    await page.evaluate(() => window.app?.cancelCustomSuiteSelection?.());
     for (const view of ['overview', 'browse', 'practice', 'more', 'settings']) {
         await page.locator(`.main-nav [data-view="${view}"]`).click();
         await page.waitForTimeout(350);
@@ -38,7 +49,20 @@ try {
         assert.doesNotMatch(await page.locator('body').innerText(), /[\u3400-\u9fff]/, `${id} is localized`);
         await page.locator('.theme-modal.show .theme-modal-close').last().click();
     }
+    await page.locator('#theme-switcher-btn-entry').click();
+    assert.doesNotMatch(await page.locator('#theme-switcher-modal').innerText(), /[\u3400-\u9fff]/, 'Theme selector is localized');
+    await page.locator('#theme-switcher-modal .theme-modal-close').click();
+    await page.locator('#show-onboarding-btn').click();
+    await page.waitForTimeout(150);
+    assert.doesNotMatch(await page.locator('body').innerText(), /[\u3400-\u9fff]/, 'Onboarding is localized');
+    const onboardingSkip = page.locator('[data-action="skip"]:visible');
+    if (await onboardingSkip.count()) await onboardingSkip.click();
+    else await page.evaluate(() => window.OnboardingTour?.stop?.());
     await page.locator('.main-nav [data-view="more"]').click();
+    await page.getByText('Thành tích', { exact: true }).click();
+    await page.waitForTimeout(150);
+    assert.doesNotMatch(await page.locator('#achievements-modal').innerText(), /[\u3400-\u9fff]/, 'Achievements are localized');
+    await page.locator('#achievements-modal .theme-modal-close').click();
     await page.getByText('Ôn từ vựng', { exact: true }).click();
     await page.waitForTimeout(500);
     assert.doesNotMatch(await page.locator('body').innerText(), /[\u3400-\u9fff]/, 'Vocabulary controls are localized');
@@ -50,7 +74,7 @@ try {
         host.querySelector('button').addEventListener('click', () => { host.dataset.clicked = 'yes'; });
         document.body.appendChild(host);
     });
-    await page.locator('#vi-regression button').click();
+    await page.locator('#vi-regression button').evaluate(button => button.click());
     assert.equal(await page.locator('#vi-regression').getAttribute('data-clicked'), 'yes');
     assert.equal(await page.locator('#vi-regression button').innerText(), 'Lưu');
     assert.equal(await page.locator('#vi-regression button').getAttribute('title'), 'Lưu ghi chú');

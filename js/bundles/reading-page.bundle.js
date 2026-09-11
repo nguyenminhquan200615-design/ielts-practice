@@ -16,6 +16,8 @@
 小红书|Xiaohongshu
 总览|Tổng quan
 题库浏览|Kho đề
+题库列表|Danh sách đề
+阅读背题选题|Chọn đề đọc để ôn
 练习记录|Lịch sử luyện tập
 更多|Tiện ích
 设置|Cài đặt
@@ -617,6 +619,25 @@ Markdown 导出模块未就绪|Chức năng xuất Markdown chưa sẵn sàng
 打开该练习记录回放|Mở lại bài luyện tập này
 多套题练习|Luyện nhiều bộ đề
 套题|Bộ đề
+选择套题流程|Chọn chế độ luyện bộ đề
+本次会话将锁定所选流程，答题中不再切换。|Chế độ đã chọn sẽ được giữ nguyên trong suốt bài luyện này.
+贴近官方机考|Mô phỏng bài thi trên máy tính
+自动跳转|Tự động chuyển sang bài tiếp theo
+提交后停留回看|Dừng lại xem đáp án sau khi nộp
+抽题范围|Phạm vi chọn đề
+高频 + 次高频|Thường gặp + khá thường gặp
+全部频率（默认）|Tất cả tần suất (mặc định)
+自选套题（P1/P2/P3）|Tự chọn bộ đề (P1/P2/P3)
+发现未完成套题|Tìm thấy bộ đề chưa hoàn thành
+放弃并新建|Bỏ và tạo mới
+继续上次套题|Tiếp tục bộ đề trước
+当前篇章|Bài hiện tại
+套题自选|Tự chọn bộ đề
+题库为空，无法启动自选流程。|Kho đề trống, không thể bắt đầu tự chọn bộ đề.
+当前尚未完成三篇自选，请继续选择后再确认。|Bạn chưa chọn đủ ba bài. Hãy chọn tiếp rồi xác nhận.
+自选题目无法启动，请重新选择。|Không thể mở các bài đã chọn. Hãy chọn lại.
+自选套题|Bộ đề tự chọn
+Pending|Đang chờ chọn
 仅高频|Chỉ đề thường gặp
 全部频率|Tất cả tần suất
 驻足模式|Chế độ xem lại từng bài
@@ -889,6 +910,170 @@ Markdown 导出模块未就绪|Chức năng xuất Markdown chưa sẵn sàng
         '拼写差一点': 'Gần đúng, hãy kiểm tra chính tả',
         '正确是': 'Đáp án đúng là', '暂无释义': 'Chưa có nghĩa của từ'
     });
+    Object.assign(dictionary, Object.fromEntries(`
+当前使用自定义编码：|Đang dùng mã tuỳ chỉnh:
+请输入 6 位数字编码。|Hãy nhập mã gồm 6 chữ số.
+已保存自定义编码：|Đã lưu mã tuỳ chỉnh:
+已保存：自动生成。|Đã lưu: tạo tự động.
+已随机生成并保存：|Đã tạo ngẫu nhiên và lưu:
+题库管理模块未就绪|Chức năng quản lý kho đề chưa sẵn sàng
+主题切换模块未就绪|Chức năng đổi giao diện chưa sẵn sàng
+题库筛选模块未就绪|Bộ lọc kho đề chưa sẵn sàng
+练习筛选模块未就绪|Bộ lọc lịch sử luyện tập chưa sẵn sàng
+题目模块未就绪|Chức năng đề thi chưa sẵn sàng
+PDF 模块未就绪|Chức năng PDF chưa sẵn sàng
+批量删除模块未就绪|Chức năng xoá nhiều mục chưa sẵn sàng
+练习数据模块未就绪|Dữ liệu luyện tập chưa sẵn sàng
+成就模块未就绪|Chức năng thành tích chưa sẵn sàng
+小游戏模块未就绪|Trò chơi từ vựng chưa sẵn sàng
+三篇阅读一键串联|Luyện liên tiếp ba bài đọc
+开启套题模式|Bắt đầu luyện bộ đề
+暂无题库数据|Chưa có dữ liệu kho đề
+题库加载中...|Đang tải kho đề...
+暂无题目|Chưa có đề
+删除题库配置|Xoá cấu hình kho đề
+套题模式尚未初始化|Chế độ luyện bộ đề chưa được khởi tạo
+套题模式尚未初始化，请完成加载后再试。|Chế độ luyện bộ đề chưa sẵn sàng. Hãy chờ tải xong rồi thử lại.
+套题练习|Luyện bộ đề
+多套题记录保存失败，请稍后重试。|Không thể lưu lịch sử nhiều bộ đề. Vui lòng thử lại sau.
+套题结果不完整，请完成缺失篇章后再提交。|Kết quả bộ đề chưa đầy đủ. Hãy hoàn thành các bài còn thiếu rồi nộp.
+套题记录保存失败，恢复快照已保留，请稍后重试。|Không thể lưu lịch sử bộ đề. Tiến độ khôi phục đã được giữ lại để bạn thử sau.
+套题练习已完成，记录已保存。|Đã hoàn thành bộ đề và lưu lịch sử.
+套题练习正在进行中，请先完成当前套题。|Bạn đang làm một bộ đề. Hãy hoàn thành bộ đề hiện tại trước.
+未找到可用的套题题目。|Không tìm thấy bài phù hợp cho bộ đề.
+首篇窗口未能打开，套题已安全保存；允许弹窗后可继续。|Không thể mở bài đầu tiên. Bộ đề đã được lưu; hãy cho phép cửa sổ bật lên rồi tiếp tục.
+本次正确率|Tỷ lệ đúng lần này
+VocabStore 未就绪|Kho từ vựng chưa sẵn sàng
+高亮生词已在阅读页本地缓存，主词表稍后同步|Từ mới đã được lưu tạm trên trang đọc và sẽ đồng bộ vào danh sách từ sau
+浏览类别时出现错误|Có lỗi khi mở nhóm đề
+该题目无法使用统一阅读页背题，请选择有 HTML 数据的阅读题。|Không thể ôn đề này trên trang đọc. Hãy chọn bài đọc có dữ liệu HTML.
+统一练习入口启动失败：app.openExam 抛出异常，已阻止打开原始题源 HTML。|Không thể mở trang luyện tập do lỗi hệ thống.
+统一练习入口未就绪：app.openExam 不可用，已阻止打开原始题源 HTML。|Trang luyện tập chưa sẵn sàng.
+清除失败：全量重置服务未就绪|Không thể xoá vì chức năng đặt lại dữ liệu chưa sẵn sàng
+增量|Bổ sung
+全量|Toàn bộ
+最近10次阅读暂无可分类错题|Không có câu đọc sai có thể phân loại trong 10 lượt gần nhất
+跳过回放|Bỏ qua phần xem lại
+回放需完整题库|Cần đầy đủ kho đề để xem lại
+示例记录未能写入|Không thể tạo bài làm mẫu
+跳过回顾|Bỏ qua phần xem lại
+示例记录已写入练习历史。当前题库中未找到对应题目，详情可打开，完整回放需先加载阅读题库。|Đã thêm bài làm mẫu. Không tìm thấy đề tương ứng trong kho hiện tại; bạn có thể xem chi tiết nhưng cần tải kho đề đọc để xem lại đầy đủ.
+可尝试点击回顾触发器。若提示题目不存在，请先在题库浏览中加载阅读题库后再体验完整回放。|Bạn có thể thử mở phần xem lại. Nếu hệ thống báo không tìm thấy đề, hãy tải kho đề đọc trước.
+示例记录已保存。加载阅读题库后，可从练习记录详情再次进入回顾模式。|Đã lưu bài làm mẫu. Sau khi tải kho đề đọc, bạn có thể mở lại từ phần chi tiết lịch sử luyện tập.
+自设备份|Bản sao lưu cá nhân
+学习备份|Bản sao lưu học tập
+自设词表|Danh sách từ cá nhân
+外部词表|Danh sách từ bên ngoài
+暂无学习任务|Chưa có nhiệm vụ học tập
+请导入词表或开启新词学习。|Hãy nhập danh sách từ hoặc bắt đầu học từ mới.
+下一批|Lượt tiếp theo
+今日任务完成|Đã hoàn thành nhiệm vụ hôm nay
+恭喜坚持完成所有单词复习！|Bạn đã hoàn thành toàn bộ phần ôn từ hôm nay!
+拼写正确|Viết đúng
+拼写错误|Viết sai
+表现优秀！|Kết quả xuất sắc!
+这个单词将在 20-30 个单词后再次出现进行验证。|Từ này sẽ xuất hiện lại sau 20–30 từ để kiểm tra.
+继续轮内学习|Tiếp tục học trong lượt này
+这个单词将在 3-8 个单词后再次出现。|Từ này sẽ xuất hiện lại sau 3–8 từ.
+验证通过！|Đã vượt qua bước kiểm tra!
+单词已正式进入复习队列。|Từ đã được đưa vào lịch ôn tập.
+验证未通过|Chưa vượt qua bước kiểm tra
+需要重新进入轮内学习。|Cần học lại từ này trong lượt hiện tại.
+轮内循环调整：|Điều chỉnh trong lượt học:
+认识判断：|Mức độ nhận biết:
+EF 调整：|Điều chỉnh EF:
+新词学习|Học từ mới
+复习完成：|Hoàn thành ôn tập:
+你的回答：|Câu trả lời của bạn:
+词汇表为空|Danh sách từ trống
+词汇表加载失败，已使用内置词库|Không thể tải danh sách từ; đã dùng danh sách có sẵn
+小游戏容器缺失|Không thể mở trò chơi từ vựng
+词库加载中，请稍候...|Đang tải từ vựng, vui lòng chờ...
+词汇挑战初始化失败，请稍后重试|Không thể khởi tạo thử thách từ vựng. Vui lòng thử lại sau
+请根据中文释义输入英文单词|Hãy nhập từ tiếng Anh dựa theo nghĩa tiếng Việt
+继续输入下一题的英文拼写|Tiếp tục viết từ tiếng Anh tiếp theo
+恭喜完成词汇火花挑战！|Bạn đã hoàn thành thử thách từ vựng!
+再来一局|Chơi lại
+请先输入与释义对应的英文单词。|Hãy nhập từ tiếng Anh tương ứng với nghĩa đã cho.
+正确，继续下一题！|Chính xác, tiếp tục câu tiếp theo!
+正确拼写：|Cách viết đúng:
+再试一次，把拼写牢记于心。|Hãy thử lại và ghi nhớ cách viết.
+准备好点燃词汇力了吗？|Bạn đã sẵn sàng thử thách vốn từ chưa?
+小游戏即将上线，敬请期待|Trò chơi này sắp ra mắt
+一丝不苟的|tỉ mỉ, cẩn thận
+有韧性的|kiên cường, có khả năng phục hồi
+善于表达的|diễn đạt lưu loát
+务实的|thực tế
+沉浸|đắm mình
+综合|tổng hợp
+辨别|phân biệt
+缓解|làm dịu
+连贯的|mạch lạc
+仔细审查|xem xét kỹ
+强化|củng cố
+深思|suy ngẫm
+减轻|giảm nhẹ
+推动|thúc đẩy
+详尽阐述|trình bày chi tiết
+达到顶点|đạt đến đỉnh điểm
+支撑|hỗ trợ, củng cố
+艺术技巧|nghệ thuật, kỹ xảo
+警觉的|cảnh giác
+多才多艺的|đa năng
+当前环境缺少跨标签页安全锁，已停止本地磁盘备份操作|Môi trường hiện tại thiếu cơ chế khoá an toàn giữa các tab; đã dừng sao lưu vào máy
+本地备份服务正在重置|Dịch vụ sao lưu đang được đặt lại
+当前浏览器不支持绑定本地文件夹（请使用 Chrome/Edge 并通过 http(s) 或 localhost 打开）|Trình duyệt hiện tại không hỗ trợ chọn thư mục. Hãy dùng Chrome hoặc Edge qua HTTP(S) hay localhost.
+未选择文件夹|Chưa chọn thư mục
+本地备份服务刚刚开始重置，请重新选择文件夹|Dịch vụ sao lưu vừa được đặt lại. Hãy chọn lại thư mục.
+未获得文件夹读写权限|Chưa được cấp quyền đọc và ghi thư mục
+外部备份未能在清理前完成|Không thể hoàn tất sao lưu ngoài trước khi dọn dữ liệu
+当前没有可提交的清理准备状态|Không có trạng thái chuẩn bị dọn dữ liệu để xác nhận
+本地备份服务正在准备清理|Dịch vụ sao lưu đang chuẩn bị dọn dữ liệu
+外部备份未能在清理前完成写盘|Không thể ghi bản sao lưu ngoài trước khi dọn dữ liệu
+清理过程中数据发生变化，请重试以先完成外部备份|Dữ liệu thay đổi trong lúc dọn. Hãy thử lại để hoàn tất sao lưu trước.
+请先绑定备份文件夹|Hãy chọn thư mục sao lưu trước
+需要允许文件夹访问权限|Cần cấp quyền truy cập thư mục
+未找到有效的 v2 本地备份文件|Không tìm thấy tệp sao lưu v2 hợp lệ
+将从本地磁盘备份覆盖恢复当前数据。|Dữ liệu hiện tại sẽ được thay thế bằng bản sao lưu trên máy.
+格式：|Định dạng:
+数据域：|Phạm vi dữ liệu:
+将清空：|Sẽ xoá:
+练习记录：现有|Lịch sử luyện tập: hiện có
+备份缺失且将保留现状：|Không có trong bản sao lưu và sẽ giữ nguyên:
+已修复旧格式数据：|Dữ liệu định dạng cũ đã được sửa:
+已隔离不安全数据：|Dữ liệu không an toàn đã được cách ly:
+警告：|Cảnh báo:
+恢复前会创建一个应用内安全快照。是否继续？|Ứng dụng sẽ tạo bản sao an toàn trước khi khôi phục. Bạn có muốn tiếp tục?
+当前环境不支持文件夹绑定，请使用「导出到下载」和「导入数据」。|Môi trường hiện tại không hỗ trợ chọn thư mục. Hãy dùng “Tải bản xuất dữ liệu” và “Nhập dữ liệu”.
+已绑定：|Đã liên kết:
+文件夹|thư mục
+检测到已有备份，请先恢复|Đã tìm thấy bản sao lưu; hãy khôi phục trước
+需要重新授权|Cần cấp lại quyền
+正在写入|Đang ghi dữ liệu
+上次写入|Lần ghi gần nhất
+尚未写入|Chưa ghi dữ liệu
+有未备份的新数据|Có dữ liệu mới chưa sao lưu
+最近错误：|Lỗi gần nhất:
+状态加载中…|Đang tải trạng thái…
+已绑定并检测到现有备份；为防止覆盖，请先从文件夹恢复|Đã liên kết và tìm thấy bản sao lưu. Hãy khôi phục từ thư mục trước để tránh ghi đè.
+文件夹已绑定，但首次写入失败|Đã liên kết thư mục nhưng lần ghi đầu tiên thất bại
+已绑定并写入：|Đã liên kết và ghi vào:
+已取消选择文件夹|Đã huỷ chọn thư mục
+绑定失败|Không thể liên kết thư mục
+备份内容无变化|Nội dung sao lưu không thay đổi
+已写入|Đã ghi
+检测到现有备份，请先从文件夹恢复，避免覆盖|Đã tìm thấy bản sao lưu. Hãy khôi phục từ thư mục trước để tránh ghi đè.
+写入失败：|Ghi dữ liệu thất bại:
+已从本地磁盘备份恢复|Đã khôi phục từ bản sao lưu trên máy
+数据已恢复，但备份安全状态保存失败；请保持页面开启并重试恢复|Dữ liệu đã được khôi phục nhưng không thể lưu trạng thái an toàn. Hãy giữ trang mở và thử khôi phục lại.
+已取消恢复|Đã huỷ khôi phục
+解除绑定后将停止自动写入；磁盘上的 JSON 文件不会删除。确定？|Sau khi bỏ liên kết, ứng dụng sẽ ngừng tự động ghi; tệp JSON trên máy vẫn được giữ. Bạn có chắc không?
+已解除本地备份文件夹绑定|Đã bỏ liên kết thư mục sao lưu
+解除绑定失败|Không thể bỏ liên kết thư mục
+本地备份 · 需授权|Sao lưu trên máy · Cần cấp quyền
+本地备份 · 待更新|Sao lưu trên máy · Cần cập nhật
+本地备份 · 已就绪|Sao lưu trên máy · Sẵn sàng
+`.trim().split('\n').map(line => { const i = line.indexOf('|'); return [line.slice(0, i), line.slice(i + 1)]; })));
     // Match complete Chinese phrases, never replace characters inside unknown prose.
     const phrases = Object.keys(dictionary).filter(key => /[\u3400-\u9fff]/.test(key))
         .sort((a, b) => b.length - a.length);
@@ -919,6 +1104,27 @@ Markdown 导出模块未就绪|Chức năng xuất Markdown chưa sẵn sàng
             .replace(/(\d+)\s*次\s*5\s*分钟内完成高分练习/g, 'Đạt điểm cao $1 lần trong vòng 5 phút')
             .replace(/单次练习获得\s*100%\s*正确率/g, 'Đạt tỷ lệ đúng 100% trong một bài luyện')
             .replace(/你有\s*(\d+)\s*个(?:到期复习|待复习)，建议先复习。/g, 'Bạn có $1 từ đến hạn ôn. Nên ôn lại trước.')
+            .replace(/当前抽题范围（(.+?)）缺少\s*(P[123])\s*阅读题目，无法开启套题练习。/g, 'Phạm vi hiện tại ($1) không có bài đọc $2 nên không thể bắt đầu bộ đề.')
+            .replace(/当前抽题范围（(.+?)）中的\s*(P[123])\s*已全部练习过，已自动放宽为允许重复抽题。/g, 'Bạn đã luyện hết bài $2 trong phạm vi $1; hệ thống đã cho phép chọn lại đề cũ.')
+            .replace(/已恢复未完成套题：(.+)/g, 'Đã khôi phục bộ đề chưa hoàn thành: $1')
+            .replace(/已完成(.+?)，正在继续：(.+?)。?$/g, 'Đã hoàn thành $1, đang tiếp tục: $2.')
+            .replace(/检测到未完成套题：(.+?)。请选择继续或放弃。/g, 'Tìm thấy bộ đề chưa hoàn thành: $1. Hãy chọn tiếp tục hoặc bỏ.')
+            .replace(/多套题练习已完成，已保存\s*(\d+)\s*条套题记录。/g, 'Đã hoàn thành và lưu $1 bộ đề.')
+            .replace(/(.+?)已启动，正在打开第一篇。/g, 'Đã bắt đầu $1, đang mở bài đầu tiên.')
+            .replace(/你有\s*(\d+)\s*个待复习，建议先复习。/g, 'Bạn có $1 từ cần ôn. Nên ôn lại trước.')
+            .replace(/第\s*(\d+)\s*\/\s*(\d+)\s*页/g, 'Trang $1 / $2')
+            .replace(/本轮共答对\s*(\d+)\s*\/\s*(\d+)\s*题/g, 'Lượt này đúng $1 / $2 câu')
+            .replace(/(.+?)，做题\s*(\d+)\s*套/g, '$1, đã làm $2 bộ đề')
+            .replace(/(.+?)共做题\s*(\d+)\s*套，活跃\s*(\d+)\s*天/g, '$1: đã làm $2 bộ đề trong $3 ngày')
+            .replace(/最近(\d+)次阅读共\s*(\d+)\s*道错题/g, '$2 câu sai trong $1 bài đọc gần nhất')
+            .replace(/本次正确率\s*(.+)/g, 'Tỷ lệ đúng lần này: $1')
+            .replace(/已加入阅读高亮生词：(.+)/g, 'Đã thêm từ được tô sáng vào danh sách: $1')
+            .replace(/✓\s*完成选择\s*\((\d+)\)/g, '✓ Hoàn tất chọn ($1)')
+            .replace(/确定要删除选中的\s*(\d+)\s*条记录吗？此操作不可恢复。/g, 'Bạn có chắc muốn xoá $1 lượt đã chọn? Không thể hoàn tác.')
+            .replace(/将删除配置“(.+?)”及其题库路径映射。练习记录不会被删除。/g, 'Cấu hình “$1” và đường dẫn kho đề sẽ bị xoá. Lịch sử luyện tập vẫn được giữ lại.')
+            .replace(/(.+?)导入完成，已同步\s*(\d+)\s*条词汇/g, 'Đã nhập $1 và đồng bộ $2 từ')
+            .replace(/(.+?)导入完成：新增\s*(\d+)\s*条，更新\s*(\d+)\s*条/g, 'Đã nhập $1: thêm $2 từ, cập nhật $3 từ')
+            .replace(/练习数据层暂不可用（(.+?)）。您可跳过回顾演示，继续了解其他功能。/g, 'Dữ liệu luyện tập tạm thời chưa sẵn sàng ($1). Bạn có thể bỏ qua phần xem lại để tiếp tục hướng dẫn.')
             .replace(pattern, match => dictionary[match]);
     }
 

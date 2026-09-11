@@ -219,30 +219,30 @@
                 host.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,0.55);display:flex;align-items:center;justify-content:center;z-index:9999;';
                 host.innerHTML = [
                     '<div role="dialog" aria-modal="true" style="width:min(420px,92vw);background:var(--color-white, #fff);border:1px solid var(--color-gray-200, #e2e8f0);border-radius:16px;padding:24px;box-shadow:var(--shadow-xl, 0 20px 25px -5px rgba(0,0,0,0.1));font-family:var(--font-family-primary, sans-serif);">',
-                    '<h3 style="margin:0 0 8px;font-size:20px;font-weight:700;color:var(--color-gray-900, #0f172a);letter-spacing:-0.02em;">选择套题流程</h3>',
-                    '<p style="margin:0 0 20px;font-size:14px;line-height:1.6;color:var(--color-gray-600, #475569);">本次会话将锁定所选流程，答题中不再切换。</p>',
+                    '<h3 style="margin:0 0 8px;font-size:20px;font-weight:700;color:var(--color-gray-900, #0f172a);letter-spacing:-0.02em;">Chọn chế độ luyện bộ đề</h3>',
+                    '<p style="margin:0 0 20px;font-size:14px;line-height:1.6;color:var(--color-gray-600, #475569);">Chế độ đã chọn sẽ được giữ nguyên trong suốt bài luyện này.</p>',
                     '<div style="display:flex;flex-direction:column;gap:10px;">',
                     '<button type="button" data-suite-flow-mode="simulation" style="padding:14px 16px;border:2px solid transparent;border-radius:12px;background:var(--color-gray-50, #f8fafc);color:var(--color-gray-800, #1e293b);font-weight:600;cursor:pointer;text-align:left;transition:all 0.2s ease;display:flex;flex-direction:column;gap:4px;">',
-                    '<span style="font-size:15px;">模拟模式</span>',
-                    '<span style="font-size:12px;font-weight:400;color:var(--color-gray-500, #64748b);">贴近官方机考</span>',
+                    '<span style="font-size:15px;">Chế độ thi thử</span>',
+                    '<span style="font-size:12px;font-weight:400;color:var(--color-gray-500, #64748b);">Mô phỏng bài thi trên máy tính</span>',
                     '</button>',
                     '<button type="button" data-suite-flow-mode="classic" style="padding:14px 16px;border:2px solid transparent;border-radius:12px;background:var(--color-gray-50, #f8fafc);color:var(--color-gray-800, #1e293b);font-weight:600;cursor:pointer;text-align:left;transition:all 0.2s ease;display:flex;flex-direction:column;gap:4px;">',
-                    '<span style="font-size:15px;">经典模式</span>',
-                    '<span style="font-size:12px;font-weight:400;color:var(--color-gray-500, #64748b);">自动跳转</span>',
+                    '<span style="font-size:15px;">Chế độ tiêu chuẩn</span>',
+                    '<span style="font-size:12px;font-weight:400;color:var(--color-gray-500, #64748b);">Tự động chuyển sang bài tiếp theo</span>',
                     '</button>',
                     '<button type="button" data-suite-flow-mode="stationary" style="padding:14px 16px;border:2px solid transparent;border-radius:12px;background:var(--color-gray-50, #f8fafc);color:var(--color-gray-800, #1e293b);font-weight:600;cursor:pointer;text-align:left;transition:all 0.2s ease;display:flex;flex-direction:column;gap:4px;">',
-                    '<span style="font-size:15px;">驻足模式</span>',
-                    '<span style="font-size:12px;font-weight:400;color:var(--color-gray-500, #64748b);">提交后停留回看</span>',
+                    '<span style="font-size:15px;">Chế độ xem lại từng bài</span>',
+                    '<span style="font-size:12px;font-weight:400;color:var(--color-gray-500, #64748b);">Dừng lại xem đáp án sau khi nộp</span>',
                     '</button>',
                     '</div>',
                     '<div style="margin-top:20px;">',
-                    '<label for="suite-frequency-scope" style="display:block;margin-bottom:8px;font-size:13px;font-weight:600;color:var(--color-gray-700, #334155);">抽题范围</label>',
+                    '<label for="suite-frequency-scope" style="display:block;margin-bottom:8px;font-size:13px;font-weight:600;color:var(--color-gray-700, #334155);">Phạm vi chọn đề</label>',
                     '<div style="position:relative;">',
                     '<select id="suite-frequency-scope" style="width:100%;appearance:none;background:var(--color-white, #fff);padding:12px 36px 12px 14px;border:1px solid var(--color-gray-300, #cbd5e1);border-radius:10px;font-size:14px;color:var(--color-gray-900, #0f172a);cursor:pointer;outline:none;transition:border-color 0.2s ease;box-shadow:0 1px 2px rgba(0,0,0,0.05);">',
-                    '<option value="high_medium">高频 + 次高频</option>',
-                    '<option value="high">仅高频</option>',
-                    '<option value="all">全部频率（默认）</option>',
-                    '<option value="custom">自选套题（P1/P2/P3）</option>',
+                    '<option value="high_medium">Thường gặp + khá thường gặp</option>',
+                    '<option value="high">Chỉ đề thường gặp</option>',
+                    '<option value="all">Tất cả tần suất (mặc định)</option>',
+                    '<option value="custom">Tự chọn bộ đề (P1/P2/P3)</option>',
                     '</select>',
                     '<div style="position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--color-gray-500, #64748b);">',
                     '<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>',
@@ -250,7 +250,7 @@
                     '</div>',
                     '</div>',
                     '<div style="margin-top:24px;display:flex;justify-content:flex-end;gap:12px;">',
-                    '<button type="button" data-suite-flow-cancel="1" style="padding:10px 16px;border:1px solid var(--color-gray-200, #e2e8f0);border-radius:8px;background:var(--color-white, #fff);color:var(--color-gray-600, #475569);font-weight:500;font-size:14px;cursor:pointer;transition:all 0.2s ease;">取消</button>',
+                    '<button type="button" data-suite-flow-cancel="1" style="padding:10px 16px;border:1px solid var(--color-gray-200, #e2e8f0);border-radius:8px;background:var(--color-white, #fff);color:var(--color-gray-600, #475569);font-weight:500;font-size:14px;cursor:pointer;transition:all 0.2s ease;">Huỷ</button>',
                     '</div>',
                     '</div>'
                 ].join('');
@@ -313,7 +313,7 @@
                 }
                 var completedCount = Math.max(0, Number(candidate && candidate.completedCount) || 0);
                 var total = Math.max(0, Number(candidate && candidate.total) || 0);
-                var escapedTitle = String(candidate && candidate.title || '当前篇章')
+                var escapedTitle = String(candidate && candidate.title || 'Bài hiện tại')
                     .replace(/&/g, '&amp;')
                     .replace(/</g, '&lt;')
                     .replace(/>/g, '&gt;')
@@ -324,13 +324,13 @@
                 host.style.cssText = 'position:fixed;inset:0;background:rgba(15,23,42,0.55);display:flex;align-items:center;justify-content:center;z-index:10000;padding:16px;';
                 host.innerHTML = [
                     '<div role="dialog" aria-modal="true" aria-labelledby="suite-recovery-title" style="width:min(440px,100%);background:var(--color-white, #fff);border:1px solid var(--color-gray-200, #e2e8f0);border-radius:8px;padding:24px;box-shadow:var(--shadow-xl, 0 20px 25px -5px rgba(0,0,0,0.1));font-family:var(--font-family-primary, sans-serif);">',
-                    '<h3 id="suite-recovery-title" style="margin:0 0 8px;font-size:20px;font-weight:700;color:var(--color-gray-900, #0f172a);letter-spacing:0;">发现未完成套题</h3>',
+                    '<h3 id="suite-recovery-title" style="margin:0 0 8px;font-size:20px;font-weight:700;color:var(--color-gray-900, #0f172a);letter-spacing:0;">Tìm thấy bộ đề chưa hoàn thành</h3>',
                     '<p style="margin:0 0 6px;font-size:14px;line-height:1.6;color:var(--color-gray-700, #334155);">' + escapedTitle + '</p>',
-                    '<p style="margin:0 0 20px;font-size:13px;line-height:1.6;color:var(--color-gray-500, #64748b);">已完成 ' + completedCount + ' / ' + total + ' 篇。放弃后将删除这套未完成进度，但不会生成单篇记录。</p>',
+                    '<p style="margin:0 0 20px;font-size:13px;line-height:1.6;color:var(--color-gray-500, #64748b);">Đã hoàn thành ' + completedCount + ' / ' + total + ' bài. Nếu bỏ bộ đề này, tiến độ chưa hoàn thành sẽ bị xoá và không tạo lịch sử riêng cho từng bài.</p>',
                     '<div style="display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px;">',
-                    '<button type="button" data-suite-recovery-choice="cancel" style="padding:10px 14px;border:1px solid var(--color-gray-300, #cbd5e1);border-radius:8px;background:var(--color-white, #fff);color:var(--color-gray-700, #334155);font-weight:600;cursor:pointer;">取消</button>',
-                    '<button type="button" data-suite-recovery-choice="discard" style="padding:10px 14px;border:1px solid #dc2626;border-radius:8px;background:var(--color-white, #fff);color:#b91c1c;font-weight:600;cursor:pointer;">放弃并新建</button>',
-                    '<button type="button" data-suite-recovery-choice="continue" style="padding:10px 14px;border:1px solid var(--color-brand-primary, #4f46e5);border-radius:8px;background:var(--color-brand-primary, #4f46e5);color:#fff;font-weight:600;cursor:pointer;">继续上次套题</button>',
+                    '<button type="button" data-suite-recovery-choice="cancel" style="padding:10px 14px;border:1px solid var(--color-gray-300, #cbd5e1);border-radius:8px;background:var(--color-white, #fff);color:var(--color-gray-700, #334155);font-weight:600;cursor:pointer;">Huỷ</button>',
+                    '<button type="button" data-suite-recovery-choice="discard" style="padding:10px 14px;border:1px solid #dc2626;border-radius:8px;background:var(--color-white, #fff);color:#b91c1c;font-weight:600;cursor:pointer;">Bỏ và tạo mới</button>',
+                    '<button type="button" data-suite-recovery-choice="continue" style="padding:10px 14px;border:1px solid var(--color-brand-primary, #4f46e5);border-radius:8px;background:var(--color-brand-primary, #4f46e5);color:#fff;font-weight:600;cursor:pointer;">Tiếp tục bộ đề trước</button>',
                     '</div>',
                     '</div>'
                 ].join('');

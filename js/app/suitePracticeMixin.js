@@ -3357,7 +3357,7 @@
             const frequencyScope = options.frequencyScope || 'custom';
             const examIndex = await this._fetchSuiteExamIndex();
             if (!examIndex.length) {
-                window.showMessage && window.showMessage('题库为空，无法启动自选流程。', 'warning');
+                window.showMessage && window.showMessage('Kho đề trống, không thể bắt đầu tự chọn bộ đề.', 'warning');
                 return false;
             }
 
@@ -3385,7 +3385,7 @@
             for (const category of categories) {
                 const pool = normalizedIndex.filter(item => item.category === category);
                 if (!pool.length) {
-                    window.showMessage && window.showMessage('当前题库缺少 ' + category + ' 阅读题目，无法启动自选流程。', 'warning');
+                    window.showMessage && window.showMessage('Kho đề hiện tại không có bài đọc ' + category + ', không thể bắt đầu tự chọn bộ đề.', 'warning');
                     return false;
                 }
             }
@@ -3394,7 +3394,7 @@
 
             if (typeof global.setBrowseTitle === 'function') {
                 try {
-                    global.setBrowseTitle('套题自选');
+                    global.setBrowseTitle('Tự chọn bộ đề');
                 } catch (_) {}
             }
 
@@ -3451,13 +3451,13 @@
         async confirmCustomSuiteSelection() {
             const draft = this._getCustomSuiteDraftState();
             if (!draft || draft.status !== 'ready') {
-                window.showMessage && window.showMessage('当前尚未完成三篇自选，请继续选择后再确认。', 'warning');
+                window.showMessage && window.showMessage('Bạn chưa chọn đủ ba bài. Hãy chọn tiếp rồi xác nhận.', 'warning');
                 return false;
             }
 
             const sequence = await this._buildCustomSuiteSequenceFromDraft(draft);
             if (!sequence.length) {
-                window.showMessage && window.showMessage('自选题目无法启动，请重新选择。', 'warning');
+                window.showMessage && window.showMessage('Không thể mở các bài đã chọn. Hãy chọn lại.', 'warning');
                 return false;
             }
 
@@ -3465,7 +3465,7 @@
                 flowMode: draft.flowMode || 'classic',
                 frequencyScope: draft.frequencyScope || 'custom',
                 suiteWindowName: 'ielts-suite-mode-tab',
-                launchLabel: '自选套题'
+                launchLabel: 'Bộ đề tự chọn'
             });
 
             if (started) {

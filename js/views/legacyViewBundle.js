@@ -2813,7 +2813,7 @@
         infoContent.appendChild(meta);
         info.appendChild(infoContent);
         if (isSelecting && currentCategory) {
-            info.appendChild(this._createElement('div', { className: 'suite-custom-selection-badge' }, currentCategory + ' Pending'));
+            info.appendChild(this._createElement('div', { className: 'suite-custom-selection-badge' }, currentCategory + ' · Đang chờ chọn'));
         }
         if (isMemorizeSelecting) {
             info.appendChild(this._createElement('div', { className: 'suite-custom-selection-badge' }, '背题模式'));
