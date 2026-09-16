@@ -47,6 +47,76 @@ body.hero-body::after {
         linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(246, 247, 251, 0.92));
 }
 
+@keyframes modernViewIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes modernHeroCopyIn {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes modernHeroVisualIn {
+    from {
+        opacity: 0;
+        transform: translateX(18px) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes modernAmbientDrift {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate3d(18px, -12px, 0) scale(1.05);
+    }
+}
+
+@keyframes modernCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes modernStatusPulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.12);
+    }
+
+    50% {
+        box-shadow: 0 0 0 9px rgba(94, 234, 212, 0.025);
+    }
+}
+
 .newjeans-bg-container,
 .ascii-bg-container,
 #shui-three-bg {
@@ -284,6 +354,10 @@ body.hero-body::after {
     backdrop-filter: none;
 }
 
+.hero-shell > .view.hero-panel.active {
+    animation: modernViewIn var(--modern-motion-slow) var(--modern-motion-ease) backwards;
+}
+
 .hero-panel__header {
     margin: 0 0 18px;
     padding: 0;
@@ -331,6 +405,7 @@ body.hero-body::after {
     background: rgba(22, 163, 182, 0.10);
     content: "";
     filter: blur(2px);
+    animation: modernAmbientDrift 12s ease-in-out infinite;
 }
 
 .overview-welcome__copy {
@@ -338,6 +413,30 @@ body.hero-body::after {
     z-index: 2;
     align-self: center;
     padding: clamp(36px, 5vw, 58px);
+}
+
+.overview-welcome__copy > * {
+    animation: modernHeroCopyIn 560ms var(--modern-motion-ease) backwards;
+}
+
+.overview-welcome__copy > :nth-child(1) {
+    animation-delay: 60ms;
+}
+
+.overview-welcome__copy > :nth-child(2) {
+    animation-delay: 120ms;
+}
+
+.overview-welcome__copy > :nth-child(3) {
+    animation-delay: 180ms;
+}
+
+.overview-welcome__copy > :nth-child(4) {
+    animation-delay: 240ms;
+}
+
+.overview-welcome__copy > :nth-child(5) {
+    animation-delay: 300ms;
 }
 
 .overview-welcome__copy h2 {
@@ -456,6 +555,7 @@ body.hero-body::after {
     place-items: center;
     padding: 34px;
     background: linear-gradient(145deg, #18203a, #312e81 60%, #164e63);
+    animation: modernHeroVisualIn 680ms var(--modern-motion-ease) 140ms backwards;
 }
 
 .overview-welcome__visual::after {
@@ -539,6 +639,19 @@ body.hero-body::after {
     grid-template-columns: 35px 1fr;
     align-items: center;
     gap: 12px;
+    animation: modernHeroCopyIn 480ms var(--modern-motion-ease) backwards;
+}
+
+.overview-workflow-list li:nth-child(1) {
+    animation-delay: 260ms;
+}
+
+.overview-workflow-list li:nth-child(2) {
+    animation-delay: 340ms;
+}
+
+.overview-workflow-list li:nth-child(3) {
+    animation-delay: 420ms;
 }
 
 .overview-workflow-list li > span {
@@ -581,7 +694,8 @@ body.hero-body::after {
     height: 8px;
     border-radius: 50%;
     background: #5eead4;
-    box-shadow: 0 0 0 5px rgba(94, 234, 212, 0.12);
+    box-shadow: 0 0 0 4px rgba(94, 234, 212, 0.12);
+    animation: modernStatusPulse 2.4s ease-in-out infinite;
 }
 
 /* Consistent interaction transitions */
@@ -709,6 +823,19 @@ body.hero-body::after {
     border-radius: 18px;
     box-shadow: var(--modern-shadow-sm);
     backdrop-filter: none;
+    animation: modernCardIn 540ms var(--modern-motion-ease) backwards;
+}
+
+.category-grid .category-card:nth-of-type(2) {
+    animation-delay: 80ms;
+}
+
+.category-grid .category-card:nth-of-type(3) {
+    animation-delay: 150ms;
+}
+
+.category-grid .category-card:nth-of-type(4) {
+    animation-delay: 220ms;
 }
 
 .category-grid .category-card::before,
