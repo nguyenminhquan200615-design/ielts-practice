@@ -14859,7 +14859,7 @@
         async loadActiveLibrary(forceReload = false) {
             const startTime = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
             if (typeof global.reportBootStage === 'function') {
-                global.reportBootStage('加载题库索引', 35);
+                global.reportBootStage('Đang tải chỉ mục kho đề', 35);
             }
 
             const rawKey = await this.getActiveLibraryConfigurationKey();
@@ -14904,7 +14904,7 @@
                     }
                 }
                 if (typeof global.reportBootStage === 'function') {
-                    global.reportBootStage('解析题库数据', 55);
+                    global.reportBootStage('Đang xử lý dữ liệu kho đề', 55);
                 }
 
                 const readingExams = this.getDefaultReadingIndex();
