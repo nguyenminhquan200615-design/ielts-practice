@@ -88,6 +88,39 @@ try {
     await heading.dragTo(answerBox);
     assert.match(await answerBox.innerText(), /chance discovery/i, 'Dragging an English answer still works');
     assert.match(await page.locator('#left').innerText(), /tea/i, 'English passage remains available');
+
+    // The modern mobile reading footer keeps inactive parts out of the narrow
+    // question strip and must never create page-level horizontal overflow.
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.waitForTimeout(150);
+    const mobileReading = await page.evaluate(() => ({
+        viewportWidth: window.innerWidth,
+        documentWidth: document.documentElement.scrollWidth,
+        inactivePartCount: Array.from(document.querySelectorAll('.part-nav-section:not(.active)'))
+            .filter((node) => getComputedStyle(node).display !== 'none').length,
+        submitWidth: document.querySelector('#submit-btn')?.getBoundingClientRect().width || 0
+    }));
+    assert.ok(mobileReading.documentWidth <= mobileReading.viewportWidth + 1, 'Reading page fits a 390px viewport');
+    assert.equal(mobileReading.inactivePartCount, 0, 'Inactive reading parts do not crowd the mobile footer');
+    assert.ok(mobileReading.submitWidth >= 44, 'Mobile submit control remains touch friendly');
+
+    await page.goto(new URL('../../../index.html', import.meta.url).href);
+    await page.waitForTimeout(650);
+    const mobileHome = await page.evaluate(() => {
+        const nav = document.querySelector('.main-nav');
+        const buttons = Array.from(document.querySelectorAll('.category-actions button'));
+        return {
+            viewportWidth: window.innerWidth,
+            documentWidth: document.documentElement.scrollWidth,
+            navPosition: nav ? getComputedStyle(nav).position : '',
+            navHeight: nav?.getBoundingClientRect().height || 0,
+            clippedButtons: buttons.filter((button) => button.scrollWidth > button.clientWidth + 1).length
+        };
+    });
+    assert.ok(mobileHome.documentWidth <= mobileHome.viewportWidth + 1, 'Home page fits a 390px viewport');
+    assert.equal(mobileHome.navPosition, 'fixed', 'Mobile navigation stays reachable at the bottom');
+    assert.ok(mobileHome.navHeight <= 72, 'Mobile navigation remains compact');
+    assert.equal(mobileHome.clippedButtons, 0, 'Overview actions are not clipped on mobile');
     if (process.env.VI_SCREENSHOT) await page.screenshot({ path: process.env.VI_SCREENSHOT, fullPage: true });
     assert.deepEqual(errors, [], 'No browser JavaScript errors');
     console.log('Vietnamese navigation smoke check passed.');

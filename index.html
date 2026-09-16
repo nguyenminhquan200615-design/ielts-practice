@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#f5f7fb" />
         <title>IELTS Atlas</title>
         <link
             rel="icon"
@@ -13,6 +14,7 @@
         <link rel="stylesheet" href="css/heroui-bridge.css" />
         <link rel="stylesheet" href="css/theme-switcher-scroll.css" />
         <link rel="stylesheet" href="css/onboarding.css" />
+        <link rel="stylesheet" href="css/modern-ui.css" />
     </head>
 
     <body class="hero-body boot-active" data-theme="heroui">
@@ -45,17 +47,20 @@
         <div class="message-container" id="message-container"></div>
 
         <div class="container hero-shell">
-            <div class="hero-header">
-                <h1 class="hero-brand-title" aria-label="IELTS Atlas">
-                    <span class="hero-brand-mark" aria-hidden="true">
-                        <img src="assets/images/logo.svg" alt="Biểu trưng IELTS Atlas" style="width: 80%; height: 80%; object-fit: contain; filter: drop-shadow(0 2px 8px rgba(15, 23, 42, 0.08));">
-
-                    </span>
-                    <span class="hero-brand-text">IELTS Atlas</span>
-                    <span class="hero-brand-subtitle"
-                        >Dự án chỉ uỷ quyền cho ZYZ Reading Walks
-                        phân phối. Tài khoản Xiaohongshu: 276752989</span
-                    >
+            <header class="hero-header">
+                <div class="hero-brand-copy">
+                    <h1 class="hero-brand-title" aria-label="IELTS Atlas">
+                        <span class="hero-brand-mark" aria-hidden="true">
+                            <img src="assets/images/logo.svg" alt="" />
+                        </span>
+                        <span class="hero-brand-text">IELTS Atlas</span>
+                    </h1>
+                    <p class="hero-brand-subtitle">
+                        Không gian luyện IELTS tập trung, theo dõi tiến bộ và ôn tập thông minh.
+                    </p>
+                </div>
+                <div class="hero-brand-actions">
+                    <span class="hero-source-note">Nguồn: ZYZ Reading Walks · 276752989</span>
                     <a
                         href="https://www.xiaohongshu.com/user/profile/5b4d76744eacab058489e72f"
                         target="_blank"
@@ -63,10 +68,10 @@
                         class="hero-badge hero-badge--cta hero-badge--redbook"
                         aria-label="Trang Xiaohongshu"
                     >
-                        Xiaohongshu
+                        Nguồn dự án
                     </a>
                     <a
-                        href="https://github.com/sallowayma-git/IELTS-practice"
+                        href="https://github.com/nguyenminhquan200615-design/ielts-practice"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-hover-link"
@@ -86,9 +91,10 @@
                                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
                             ></path>
                         </svg>
+                        <span>GitHub</span>
                     </a>
-                </h1>
-            </div>
+                </div>
+            </header>
 
             <nav class="main-nav hero-nav" data-nav-controller="legacy">
                 <button
@@ -96,42 +102,73 @@
                     type="button"
                     data-view="overview"
                 >
-                    📊 Tổng quan
+                    <span class="hero-nav__icon" aria-hidden="true">◫</span>
+                    <span class="hero-nav__label">Tổng quan</span>
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="browse"
                 >
-                    📚 Kho đề
+                    <span class="hero-nav__icon" aria-hidden="true">▤</span>
+                    <span class="hero-nav__label">Kho đề</span>
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="practice"
                 >
-                    📝 Lịch sử luyện tập
+                    <span class="hero-nav__icon" aria-hidden="true">◷</span>
+                    <span class="hero-nav__label">Lịch sử</span>
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="more"
                 >
-                    ✨ Tiện ích
+                    <span class="hero-nav__icon" aria-hidden="true">✦</span>
+                    <span class="hero-nav__label">Tiện ích</span>
                 </button>
                 <button
                     class="nav-btn hero-nav__btn"
                     type="button"
                     data-view="settings"
                 >
-                    ⚙️ Cài đặt
+                    <span class="hero-nav__icon" aria-hidden="true">⚙</span>
+                    <span class="hero-nav__label">Cài đặt</span>
                 </button>
             </nav>
 
             <!-- 总览页面 -->
             <div id="overview-view" class="view active hero-panel hero-section">
+                <section class="overview-welcome" aria-labelledby="overview-welcome-title">
+                    <div class="overview-welcome__copy">
+                        <span class="overview-welcome__eyebrow">IELTS READING WORKSPACE</span>
+                        <h2 id="overview-welcome-title">Luyện đúng trọng tâm.<br />Tiến bộ mỗi ngày.</h2>
+                        <p>
+                            Chọn một phần đọc để bắt đầu, luyện theo bộ đề hoặc tiếp tục từ lịch sử gần nhất.
+                        </p>
+                        <div class="overview-welcome__tags" aria-label="Tính năng nổi bật">
+                            <span>Kho đề có hệ thống</span>
+                            <span>Lưu tiến độ tự động</span>
+                            <span>Phân tích kết quả</span>
+                        </div>
+                    </div>
+                    <div class="overview-welcome__visual" aria-hidden="true">
+                        <div class="overview-orbit overview-orbit--one"></div>
+                        <div class="overview-orbit overview-orbit--two"></div>
+                        <div class="overview-score-card">
+                            <span>READING</span>
+                            <strong>Focus</strong>
+                            <small>Practice · Review · Improve</small>
+                        </div>
+                    </div>
+                </section>
                 <div class="hero-panel__header">
-                    <h2 class="hero-panel__title">📊 Tổng quan học tập</h2>
+                    <div>
+                        <span class="section-eyebrow">BẮT ĐẦU LUYỆN TẬP</span>
+                        <h2 class="hero-panel__title">Chọn phần đọc</h2>
+                    </div>
                 </div>
 
                 <div class="category-grid" id="category-overview">

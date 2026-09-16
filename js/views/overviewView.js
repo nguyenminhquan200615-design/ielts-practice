@@ -90,7 +90,7 @@
 
             const fragment = document.createDocumentFragment();
             const readingSection = this.createSection({
-                title: '阅读',
+                title: 'Luyện đọc',
                 icon: '📖',
                 entries: stats?.reading || [],
                 style: { gridColumn: '1 / -1' },
@@ -174,14 +174,14 @@
             // 特殊卡片使用不同的标题格式
             const titleText = isSpecial
                 ? entry.category
-                : `${entry.category} ${entry.type === 'reading' ? '阅读' : '听力'}`;
+                : `${entry.category} ${entry.type === 'reading' ? 'Đọc' : 'Nghe'}`;
 
             const content = [
                 this.dom.create('div', { className: 'category-header' }, [
                     this.dom.create('div', { className: 'category-icon' }, icon),
                     this.dom.create('div', {}, [
                         this.dom.create('div', { className: 'category-title' }, titleText),
-                        this.dom.create('div', { className: 'category-meta' }, `${entry.total} 篇`)
+                        this.dom.create('div', { className: 'category-meta' }, `${entry.total} bài`)
                     ])
                 ]),
                 actions
@@ -208,7 +208,7 @@
                 className: 'btn',
                 type: 'button',
                 dataset: browseDataset
-            }, '📚 浏览题库');
+            }, 'Duyệt kho đề');
 
             const randomDataset = isSpecial ? {
                 action: 'start-random-practice',
@@ -226,7 +226,7 @@
                 className: 'btn btn-secondary',
                 type: 'button',
                 dataset: randomDataset
-            }, '🎲 随机练习');
+            }, 'Luyện ngẫu nhiên');
 
             return this.dom.create('div', {
                 className: 'category-actions',
@@ -263,7 +263,7 @@
                 }
             }, [
                 this.createSvgIcon('<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><path d="M14 3v6h6"></path><path d="M8 13h8M8 17h6"></path>'),
-                this.dom.create('span', {}, '套题模式')
+                this.dom.create('span', {}, 'Luyện trọn bộ đề')
             ]);
         }
 
@@ -283,7 +283,7 @@
                 }
             }, [
                 this.createSvgIcon('<path d="M20 6v5h-5"></path><path d="M4 18v-5h5"></path><path d="M6.2 11a6 6 0 0 1 10.6-2.4L20 11"></path><path d="M17.8 13a6 6 0 0 1-10.6 2.4L4 13"></path>'),
-                this.dom.create('span', {}, '无尽模式')
+                this.dom.create('span', {}, 'Luyện liên tục')
             ]);
         }
     }
