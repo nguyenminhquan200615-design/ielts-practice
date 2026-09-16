@@ -18,6 +18,10 @@
     --modern-radius-sm: 14px;
     --modern-radius-md: 20px;
     --modern-radius-lg: 28px;
+    --modern-motion-fast: 160ms;
+    --modern-motion-base: 240ms;
+    --modern-motion-slow: 360ms;
+    --modern-motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 html {
@@ -227,6 +231,11 @@ body.hero-body::after {
     place-items: center;
     font-size: 1.05rem;
     line-height: 1;
+    transition: transform var(--modern-motion-base) var(--modern-motion-ease);
+}
+
+.hero-nav__btn.active .hero-nav__icon {
+    transform: translateY(-1px) scale(1.08);
 }
 
 .hero-nav__label {
@@ -406,6 +415,93 @@ body.hero-body::after {
 .overview-score-card small {
     font-size: 0.72rem;
     opacity: 0.72;
+}
+
+/* Consistent interaction transitions */
+.hero-brand-mark,
+.overview-score-card,
+.overview-welcome__tags span,
+.category-grid .category-card,
+.category-icon,
+#browse-view .exam-item,
+.hero-card,
+.practice-trend-card,
+.practice-custom-card,
+#more-view .tool-card,
+.tool-card-icon,
+#settings-view .hero-panel {
+    transition:
+        transform var(--modern-motion-base) var(--modern-motion-ease),
+        border-color var(--modern-motion-base) ease,
+        background-color var(--modern-motion-base) ease,
+        box-shadow var(--modern-motion-base) var(--modern-motion-ease);
+}
+
+.hero-brand-title:hover .hero-brand-mark {
+    transform: rotate(-4deg) scale(1.04);
+}
+
+.overview-score-card:hover {
+    transform: translate(-50%, -52%) rotate(-1deg);
+    box-shadow: 0 30px 64px rgba(17, 24, 39, 0.26);
+}
+
+.overview-welcome__tags span:hover {
+    border-color: rgba(91, 91, 214, 0.32);
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.category-grid .category-card:hover .category-icon,
+#more-view .tool-card:hover .tool-card-icon,
+#more-view .tool-card:focus-visible .tool-card-icon {
+    transform: translateY(-2px) scale(1.06);
+}
+
+.category-card .btn[data-action="browse-category"],
+.category-card .btn[data-action="start-random-practice"],
+.shui-glass-btn,
+#browse-view .exam-item-action-btn,
+.hero-panel .btn,
+.hero-settings-actions .btn,
+.data-management-panel .data-mgmt-btn,
+.theme-modal-close {
+    transition:
+        transform var(--modern-motion-fast) var(--modern-motion-ease),
+        border-color var(--modern-motion-fast) ease,
+        background-color var(--modern-motion-fast) ease,
+        color var(--modern-motion-fast) ease,
+        box-shadow var(--modern-motion-fast) ease;
+}
+
+.category-card .btn:active,
+.shui-glass-btn:active,
+#browse-view .exam-item-action-btn:active,
+.hero-panel .btn:active,
+.hero-settings-actions .btn:active,
+.data-management-panel .data-mgmt-btn:active,
+.theme-modal-close:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+#browse-view .search-input,
+#browse-view .browse-sort-select,
+#settings-view input,
+#settings-view select,
+#settings-view textarea {
+    transition:
+        border-color var(--modern-motion-fast) ease,
+        box-shadow var(--modern-motion-fast) ease,
+        background-color var(--modern-motion-fast) ease;
+}
+
+#browse-view .search-input:focus,
+#browse-view .browse-sort-select:focus,
+#settings-view input:focus,
+#settings-view select:focus,
+#settings-view textarea:focus {
+    border-color: rgba(91, 91, 214, 0.65);
+    box-shadow: 0 0 0 4px rgba(91, 91, 214, 0.12);
 }
 
 /* Learning cards */

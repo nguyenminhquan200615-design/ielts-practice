@@ -7,6 +7,9 @@
     --reading-modern-text: #1b2437;
     --reading-modern-muted: #667085;
     --reading-modern-bg: #f4f6fa;
+    --reading-motion-fast: 160ms;
+    --reading-motion-base: 240ms;
+    --reading-motion-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 body {
@@ -37,6 +40,10 @@ body {
 .header-btn {
     color: #475467;
     border-left: 1px solid transparent;
+    transition:
+        color var(--reading-motion-fast) ease,
+        background-color var(--reading-motion-fast) ease,
+        transform var(--reading-motion-fast) var(--reading-motion-ease);
 }
 
 .header-btn:hover {
@@ -112,6 +119,10 @@ input[type="text"].blank,
     border: 1px solid #cfd5e0;
     border-radius: 9px;
     background: #fff;
+    transition:
+        border-color var(--reading-motion-fast) ease,
+        box-shadow var(--reading-motion-fast) ease,
+        background-color var(--reading-motion-fast) ease;
 }
 
 #right input[type="text"]:focus {
@@ -125,6 +136,10 @@ input[type="text"].blank,
     border-color: #c5cad6;
     border-radius: 10px;
     background: #f8f9fc;
+    transition:
+        border-color var(--reading-motion-fast) ease,
+        background-color var(--reading-motion-fast) ease,
+        box-shadow var(--reading-motion-fast) ease;
 }
 
 .drag-item,
@@ -133,12 +148,19 @@ input[type="text"].blank,
     border-radius: 9px;
     background: #fff;
     box-shadow: 0 4px 12px rgba(31, 41, 55, 0.05);
+    transition:
+        transform var(--reading-motion-fast) var(--reading-motion-ease),
+        border-color var(--reading-motion-fast) ease,
+        background-color var(--reading-motion-fast) ease,
+        box-shadow var(--reading-motion-fast) ease;
 }
 
 .drag-item:hover,
 .draggable-word:hover {
     border-color: rgba(85, 87, 217, 0.45);
     background: var(--reading-modern-primary-soft);
+    box-shadow: 0 8px 18px rgba(31, 41, 55, 0.09);
+    transform: translateY(-2px);
 }
 
 .practice-nav {
@@ -165,6 +187,11 @@ input[type="text"].blank,
 .q-item {
     border-radius: 8px;
     color: #475467;
+    transition:
+        transform var(--reading-motion-fast) var(--reading-motion-ease),
+        border-color var(--reading-motion-fast) ease,
+        background-color var(--reading-motion-fast) ease,
+        color var(--reading-motion-fast) ease;
 }
 
 .q-item:hover {
@@ -176,16 +203,29 @@ input[type="text"].blank,
     border-color: var(--reading-modern-primary);
     background: var(--reading-modern-primary-soft);
     color: var(--reading-modern-primary);
+    transform: translateY(-1px);
 }
 
 #submit-btn {
     background: var(--reading-modern-primary);
     color: #fff;
+    transition:
+        transform var(--reading-motion-fast) var(--reading-motion-ease),
+        background-color var(--reading-motion-fast) ease,
+        box-shadow var(--reading-motion-fast) ease;
 }
 
 #submit-btn:hover:not(:disabled) {
     background: #4547bd;
     color: #fff;
+    box-shadow: 0 8px 18px rgba(69, 71, 189, 0.24);
+    transform: translateY(-1px);
+}
+
+#submit-btn:active:not(:disabled),
+.header-btn:active,
+.q-item:active {
+    transform: translateY(1px) scale(0.97);
 }
 
 #settings-panel,
@@ -193,6 +233,10 @@ input[type="text"].blank,
     border-color: var(--reading-modern-border);
     background: rgba(255, 255, 255, 0.98);
     box-shadow: -18px 0 60px rgba(31, 41, 55, 0.16);
+    transition:
+        transform var(--reading-motion-base) var(--reading-motion-ease),
+        opacity var(--reading-motion-base) ease,
+        visibility var(--reading-motion-base) ease;
 }
 
 @media (max-width: 980px) {
