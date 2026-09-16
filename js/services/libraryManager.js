@@ -274,7 +274,7 @@
         finishLibraryLoading(startTime, index) {
             const loadTime = (typeof performance !== 'undefined' && performance.now) ? performance.now() - startTime : 0;
             if (typeof global.reportBootStage === 'function') {
-                global.reportBootStage('题库装载完成', 75);
+                global.reportBootStage('Đã tải xong kho đề', 75);
             }
             try { global.updateOverview && global.updateOverview(index); } catch (_) { }
             refreshListeningAvailabilityUI(index);

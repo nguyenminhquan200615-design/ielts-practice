@@ -35,7 +35,6 @@
             this.events.delegate('click', `${this.containerSelector} [data-action="browse-category"]`, function (event) {
                 event.preventDefault();
                 if (typeof view.actions.onBrowseCategory === 'function') {
-                    // 传递 filterMode 和 path 参数（如果存在）
                     view.actions.onBrowseCategory(
                         this.dataset.category,
                         this.dataset.type,
@@ -91,9 +90,7 @@
             const fragment = document.createDocumentFragment();
             const readingSection = this.createSection({
                 title: 'Luyện đọc',
-                icon: '📖',
                 entries: stats?.reading || [],
-                style: { gridColumn: '1 / -1' },
                 rightButtons: [this.createEndlessModeButton(), this.createSuiteModeButton()]
             });
 
@@ -125,18 +122,11 @@
             this.dom.replaceContent(container, fragment);
         }
 
-        createSection({ title, icon, entries, style, rightButton, rightButtons, isSpecial = false }) {
+        createSection({ title, entries, rightButton, rightButtons, isSpecial = false }) {
             const sectionFragment = document.createDocumentFragment();
 
-            // 创建标题容器，支持右侧按钮
             const titleContainer = this.dom.create('div', {
-                style: {
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    marginBottom: '20px',
-                    ...style
-                }
+                className: 'overview-category-heading'
             });
 
             titleContainer.appendChild(this.dom.create('h3', {
@@ -145,11 +135,10 @@
             }, title));
 
 
-            // 支持单个 rightButton（向后兼容）或多个 rightButtons
             const buttons = rightButtons || (rightButton ? [rightButton] : []);
             if (buttons.length > 0) {
                 const btnGroup = this.dom.create('div', {
-                    style: { display: 'flex', gap: '8px', alignItems: 'center', border: 'none' }
+                    className: 'overview-category-heading__actions'
                 });
                 buttons.forEach(btn => btnGroup.appendChild(btn));
                 titleContainer.appendChild(btnGroup);
@@ -159,7 +148,6 @@
 
             entries.forEach((entry) => {
                 sectionFragment.appendChild(this.createCategoryCard({
-                    icon,
                     entry,
                     isSpecial
                 }));
@@ -168,20 +156,19 @@
             return sectionFragment;
         }
 
-        createCategoryCard({ icon, entry, isSpecial = false }) {
+        createCategoryCard({ entry, isSpecial = false }) {
             const actions = this.createCardActions(entry, isSpecial);
 
-            // 特殊卡片使用不同的标题格式
             const titleText = isSpecial
                 ? entry.category
                 : `${entry.category} ${entry.type === 'reading' ? 'Đọc' : 'Nghe'}`;
 
             const content = [
                 this.dom.create('div', { className: 'category-header' }, [
-                    this.dom.create('div', { className: 'category-icon' }, icon),
+                    this.dom.create('div', { className: 'category-icon' }, this.createSvgIcon('<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><path d="M8 7h8M8 11h7"></path>')),
                     this.dom.create('div', {}, [
                         this.dom.create('div', { className: 'category-title' }, titleText),
-                        this.dom.create('div', { className: 'category-meta' }, `${entry.total} bài`)
+                        this.dom.create('div', { className: 'category-meta' }, `${entry.total} bài luyện`)
                     ])
                 ]),
                 actions
@@ -191,7 +178,6 @@
         }
 
         createCardActions(entry, isSpecial = false) {
-            // 特殊卡片需要传递 filterMode 参数
             const browseDataset = isSpecial ? {
                 action: 'browse-category',
                 category: entry.category,
@@ -208,7 +194,10 @@
                 className: 'btn',
                 type: 'button',
                 dataset: browseDataset
-            }, 'Duyệt kho đề');
+            }, [
+                this.createSvgIcon('<path d="M4 6h16M4 12h16M4 18h10"></path>'),
+                this.dom.create('span', {}, 'Xem danh sách')
+            ]);
 
             const randomDataset = isSpecial ? {
                 action: 'start-random-practice',
@@ -226,16 +215,13 @@
                 className: 'btn btn-secondary',
                 type: 'button',
                 dataset: randomDataset
-            }, 'Luyện ngẫu nhiên');
+            }, [
+                this.createSvgIcon('<path d="M16 3h5v5"></path><path d="M4 20 21 3"></path><path d="M21 16v5h-5"></path><path d="m15 15 6 6"></path><path d="m4 4 5 5"></path>'),
+                this.dom.create('span', {}, 'Luyện ngẫu nhiên')
+            ]);
 
             return this.dom.create('div', {
-                className: 'category-actions',
-                style: {
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    flexWrap: 'nowrap'
-                }
+                className: 'category-actions'
             }, [browseButton, randomButton]);
         }
 

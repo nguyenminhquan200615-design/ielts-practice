@@ -320,6 +320,13 @@ function ensureSettings() {
         var value = target && target.dataset ? target.dataset.actionValue : undefined;
 
         switch (action) {
+            case 'navigate-view':
+                if (typeof global.showView === 'function') {
+                    return global.showView(value || 'overview', false);
+                }
+                return global.app && typeof global.app.navigateToView === 'function'
+                    ? global.app.navigateToView(value || 'overview')
+                    : undefined;
             case 'filter-exams':
                 return typeof global.filterByType === 'function' ? global.filterByType(value || 'all') : undefined;
             case 'filter-frequency':
